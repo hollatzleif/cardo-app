@@ -1,204 +1,40 @@
-<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Your Assistant · Cardo</title><meta name="description" content="A local AI assistant that turns messy thoughts into concrete actions – running 100 % on your device. Setup, model guide, multiple assistants, teams and delegation, honestly explained."><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://cardo-polls.hollatzleif.workers.dev; frame-src 'none'; object-src 'none'; base-uri 'self'"><link rel="icon" type="image/png" href="/cardo-app/favicon.png"><link rel="icon" type="image/x-icon" href="/cardo-app/favicon.ico" sizes="any"><link rel="apple-touch-icon" href="/cardo-app/apple-touch-icon.png"><style>:root{--base: #1e1e2e;--surface-0: #313244;--surface-1: #45475a;--text: #cdd6f4;--text-muted: #a6adc8;--accent: #89b4fa;--success: #a6e3a1;--warning: #f9e2af;--danger: #f38ba8;--radius: 12px}@media(prefers-color-scheme:light){:root{--base: #eff1f5;--surface-0: #e6e9ef;--surface-1: #ccd0da;--text: #4c4f69;--text-muted: #6c6f85;--accent: #1e66f5;--success: #40a02b;--warning: #df8e1d;--danger: #d20f39}}*{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;background:var(--base);color:var(--text);line-height:1.6}a{color:var(--accent)}main{max-width:900px;margin:0 auto;padding:2rem 1.25rem 4rem}.site-header{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem;padding:.9rem 1.25rem;border-bottom:1px solid var(--surface-1);position:sticky;top:0;background:var(--base);z-index:10}.brand{font-weight:800;text-decoration:none;font-size:1.15rem}.site-header nav{display:flex;gap:.25rem;flex-wrap:wrap}.site-header nav a{text-decoration:none;color:var(--text-muted);padding:.35rem .7rem;border-radius:8px}.site-header nav a.active,.site-header nav a:hover{color:var(--text);background:var(--surface-0)}.site-footer{border-top:1px solid var(--surface-1);padding:1.5rem 1.25rem;color:var(--text-muted);font-size:.9rem;text-align:center}.card{background:var(--surface-0);border:1px solid var(--surface-1);border-radius:var(--radius);padding:1.25rem}.btn{display:inline-block;background:var(--accent);color:var(--base);padding:.6rem 1.2rem;border-radius:10px;text-decoration:none;font-weight:700;border:none;cursor:pointer;font-size:1rem}.btn--ghost{background:transparent;color:var(--accent);border:1px solid var(--accent)}.muted{color:var(--text-muted)}code,pre{font-family:ui-monospace,SF Mono,Menlo,monospace}pre{background:var(--surface-0);border:1px solid var(--surface-1);border-radius:10px;padding:.9rem 1rem;overflow-x:auto}kbd{font-family:ui-monospace,SF Mono,Menlo,monospace;font-size:.85em;background:var(--surface-0);border:1px solid var(--surface-1);border-bottom-width:2px;border-radius:6px;padding:.1em .45em}h1,h2,h3{line-height:1.25}.badge{display:inline-block;padding:.1rem .6rem;border-radius:999px;font-size:.8rem;border:1px solid var(--success);color:var(--success)}
-.hero[data-astro-cid-vo5oohh5]{text-align:center;padding:2rem 0 1rem}.hero[data-astro-cid-vo5oohh5] h1[data-astro-cid-vo5oohh5]{font-size:2.4rem;margin-bottom:.5rem}.hero[data-astro-cid-vo5oohh5] em[data-astro-cid-vo5oohh5]{color:var(--accent);font-style:normal}.hero[data-astro-cid-vo5oohh5] p[data-astro-cid-vo5oohh5]{max-width:680px;margin:.75rem auto}.hero__privacy[data-astro-cid-vo5oohh5]{font-size:.95rem}.step[data-astro-cid-vo5oohh5]{margin-top:1.25rem}.step[data-astro-cid-vo5oohh5] h2[data-astro-cid-vo5oohh5]{margin-top:0}.step[data-astro-cid-vo5oohh5] h3[data-astro-cid-vo5oohh5]{margin-top:1.5rem}.step[data-astro-cid-vo5oohh5] li[data-astro-cid-vo5oohh5]{margin-bottom:.6rem}.braindump[data-astro-cid-vo5oohh5]{background:var(--base);border:1px solid var(--surface-1);border-radius:10px;padding:.8rem 1rem;font-style:italic;margin:.75rem 0}.proposals[data-astro-cid-vo5oohh5]{display:grid;gap:.6rem;margin:.75rem 0}.proposal[data-astro-cid-vo5oohh5]{background:var(--base);border:1px solid var(--surface-1);border-radius:10px;padding:.65rem .9rem;display:flex;flex-wrap:wrap;gap:.35rem .75rem;align-items:baseline}.proposal__kind[data-astro-cid-vo5oohh5]{color:var(--text-muted);font-size:.85rem;white-space:nowrap}.proposal__actions[data-astro-cid-vo5oohh5]{margin-left:auto;color:var(--text-muted);font-size:.85rem;white-space:nowrap}.proposal__actions[data-astro-cid-vo5oohh5] b[data-astro-cid-vo5oohh5]{color:var(--success)}.table-scroll[data-astro-cid-vo5oohh5]{overflow-x:auto;margin:1rem 0}table[data-astro-cid-vo5oohh5]{border-collapse:collapse;width:100%;font-size:.88rem;min-width:900px}th[data-astro-cid-vo5oohh5],td[data-astro-cid-vo5oohh5]{text-align:left;padding:.5rem .6rem;border-bottom:1px solid var(--surface-1);vertical-align:top}thead[data-astro-cid-vo5oohh5] th[data-astro-cid-vo5oohh5]{border-bottom:2px solid var(--surface-1);white-space:nowrap}tr[data-astro-cid-vo5oohh5].family th[data-astro-cid-vo5oohh5]{background:var(--base);padding-top:.75rem;font-size:.92rem}td[data-astro-cid-vo5oohh5]:nth-child(2),td[data-astro-cid-vo5oohh5]:nth-child(3){white-space:nowrap}details[data-astro-cid-vo5oohh5]{margin-top:.75rem}summary[data-astro-cid-vo5oohh5]{cursor:pointer;font-weight:600}details[data-astro-cid-vo5oohh5] p[data-astro-cid-vo5oohh5]{margin:.5rem 0 .75rem}
-</style></head> <body> <header class="site-header"> <a class="brand" href="/cardo-app/">⊕ Cardo</a> <nav> <a href="/cardo-app/" class>Home</a><a href="/cardo-app/download" class>Download</a><a href="/cardo-app/docs" class>Docs</a><a href="/cardo-app/docs/tutorial" class>Tutorial</a><a href="/cardo-app/assistant" class="active">Your Assistant</a><a href="https://github.com/hollatzleif/cardo-app/discussions" rel="noopener" class>Forum ↗</a><a href="/cardo-app/polls" class>Polls</a><a href="/cardo-app/donate" class>Donate</a> </nav> </header> <main>  <section class="hero" data-astro-cid-vo5oohh5> <h1 data-astro-cid-vo5oohh5>Your Assistant</h1> <p class="muted" data-astro-cid-vo5oohh5>
-A local AI that turns messy thoughts into concrete actions: appointments, to-dos, notes,
-      habits – proposed as cards, applied only when <em data-astro-cid-vo5oohh5>you</em> say yes.
-</p> <p data-astro-cid-vo5oohh5> <span class="badge" data-astro-cid-vo5oohh5>● 100 % on your device</span> </p> <p class="muted hero__privacy" data-astro-cid-vo5oohh5>
-The assistant runs entirely on your machine. Your thoughts, your notes, your calendar –
-      none of it ever leaves your device. The <strong data-astro-cid-vo5oohh5>only</strong> network contact is the
-      one-time model download from <code data-astro-cid-vo5oohh5>huggingface.co</code>, and only when you click
-      “Install”. After that, everything works offline. Forever.
-</p> </section> <section class="card step" data-astro-cid-vo5oohh5> <h2 data-astro-cid-vo5oohh5>How it works: dump your thoughts, get cards back</h2> <p data-astro-cid-vo5oohh5>
-You don't write commands. You write the way your head sounds. Say you type this into the
-      assistant widget:
-</p> <div class="braindump" data-astro-cid-vo5oohh5>
-“dentist tomorrow 9am, buy milk, call Lisa back, want to read daily again”
-</div> <p data-astro-cid-vo5oohh5>The assistant reads it, sorts it, and answers with proposal cards:</p> <div class="proposals" data-astro-cid-vo5oohh5> <div class="proposal" data-astro-cid-vo5oohh5> <span class="proposal__kind" data-astro-cid-vo5oohh5>📅 Appointment</span> <strong data-astro-cid-vo5oohh5>Dentist</strong> – tomorrow, 9:00, with a reminder before it starts.
-<span class="proposal__actions" data-astro-cid-vo5oohh5><b data-astro-cid-vo5oohh5>Yes</b> · Edit · No</span> </div> <div class="proposal" data-astro-cid-vo5oohh5> <span class="proposal__kind" data-astro-cid-vo5oohh5>✓ To-do</span> <strong data-astro-cid-vo5oohh5>Buy milk</strong> <span class="proposal__actions" data-astro-cid-vo5oohh5><b data-astro-cid-vo5oohh5>Yes</b> · Edit · No</span> </div> <div class="proposal" data-astro-cid-vo5oohh5> <span class="proposal__kind" data-astro-cid-vo5oohh5>✓ To-do</span> <strong data-astro-cid-vo5oohh5>Call Lisa back</strong> <span class="proposal__actions" data-astro-cid-vo5oohh5><b data-astro-cid-vo5oohh5>Yes</b> · Edit · No</span> </div> <div class="proposal" data-astro-cid-vo5oohh5> <span class="proposal__kind" data-astro-cid-vo5oohh5>🔥 Habit</span> <strong data-astro-cid-vo5oohh5>Read daily</strong> – added to your daily routine.
-<span class="proposal__actions" data-astro-cid-vo5oohh5><b data-astro-cid-vo5oohh5>Yes</b> · Edit · No</span> </div> </div> <p data-astro-cid-vo5oohh5> <strong data-astro-cid-vo5oohh5>Nothing happens without your confirmation.</strong> Every card waits for
-<em data-astro-cid-vo5oohh5>Yes</em>, <em data-astro-cid-vo5oohh5>Edit</em> (fix the details first) or <em data-astro-cid-vo5oohh5>No</em>. The assistant can only
-      use the same commands you see in the command palette – it cannot invent actions, touch
-      files behind your back, or delete anything silently.
-</p> <p class="muted" data-astro-cid-vo5oohh5>
-Trust it after a while? You can switch confirmation off per assistant in its settings –
-      cards then apply immediately. Turning it back on is one click away, and it's on by default.
-</p> </section> <section class="card step" data-astro-cid-vo5oohh5> <h2 data-astro-cid-vo5oohh5>Setup: three steps, no expertise needed</h2> <ol data-astro-cid-vo5oohh5> <li data-astro-cid-vo5oohh5> <strong data-astro-cid-vo5oohh5>Open <em data-astro-cid-vo5oohh5>Settings → Assistant</em>.</strong> That's the whole entry point –
-        the assistant is a built-in tool like any other, and its privacy light is green.
-</li> <li data-astro-cid-vo5oohh5> <strong data-astro-cid-vo5oohh5>Let Cardo check your machine.</strong> The system check looks at your RAM and
-        CPU cores (and recognizes Apple Silicon, which runs local models especially well). Every
-        available model then gets an honest rating: <em data-astro-cid-vo5oohh5>great</em>, <em data-astro-cid-vo5oohh5>okay</em>, <em data-astro-cid-vo5oohh5>slow</em>
-or <em data-astro-cid-vo5oohh5>too big for this machine</em> – plus one clear recommendation. No guessing, no
-        “it depends” – Cardo tells you what will actually feel good on <em data-astro-cid-vo5oohh5>your</em> hardware.
-</li> <li data-astro-cid-vo5oohh5> <strong data-astro-cid-vo5oohh5>One click to install.</strong> Pick a model (the recommended one is a safe
-        choice) and press install. This is the one moment Cardo contacts the internet: the model
-        file is downloaded from <code data-astro-cid-vo5oohh5>huggingface.co</code>, with a visible progress bar. Once
-        it's done, you're offline-capable for good.
-</li> </ol> <p data-astro-cid-vo5oohh5>
-Right after that, the assistant asks a few <strong data-astro-cid-vo5oohh5>personality questions</strong>: what
-      it should be called, what it should call you, how it should talk (short &amp; direct,
-      friendly, or detailed) and which language it should answer in. Two minutes, and it feels
-      like yours.
-</p> </section> <section class="card step" data-astro-cid-vo5oohh5> <h2 data-astro-cid-vo5oohh5>Choosing a model: an honest guide</h2> <p data-astro-cid-vo5oohh5>
-Bigger models understand more nuance but need more RAM and answer more slowly. Smaller
-      models are quick and light but occasionally miss subtleties. There is no “best” model –
-      only the best one <em data-astro-cid-vo5oohh5>for your machine and your patience</em>. Sizes below are rough
-      values for the usual 4-bit builds Cardo installs; the system check gives you exact,
-      per-machine ratings.
-</p> <div class="table-scroll" data-astro-cid-vo5oohh5> <table data-astro-cid-vo5oohh5> <thead data-astro-cid-vo5oohh5> <tr data-astro-cid-vo5oohh5> <th data-astro-cid-vo5oohh5>Model</th> <th data-astro-cid-vo5oohh5>Download</th> <th data-astro-cid-vo5oohh5>RAM needed</th> <th data-astro-cid-vo5oohh5>Speed feel</th> <th data-astro-cid-vo5oohh5>Strengths</th> <th data-astro-cid-vo5oohh5>Weaknesses</th> <th data-astro-cid-vo5oohh5>Ideal for</th> <th data-astro-cid-vo5oohh5>License</th> </tr> </thead> <tbody data-astro-cid-vo5oohh5> <tr class="family" data-astro-cid-vo5oohh5><th colspan="8" data-astro-cid-vo5oohh5>Qwen3 (Alibaba) – Cardo's default family</th></tr> <tr data-astro-cid-vo5oohh5> <td data-astro-cid-vo5oohh5>Qwen3 0.6B</td> <td data-astro-cid-vo5oohh5>~0.4 GB</td> <td data-astro-cid-vo5oohh5>~2–3 GB</td> <td data-astro-cid-vo5oohh5>Instant</td> <td data-astro-cid-vo5oohh5>Tiny, runs anywhere, surprisingly capable at sorting braindumps</td> <td data-astro-cid-vo5oohh5>Misses nuance, short memory for context</td> <td data-astro-cid-vo5oohh5>Old or low-RAM machines, trying the feature out</td> <td data-astro-cid-vo5oohh5>Apache-2.0</td> </tr> <tr data-astro-cid-vo5oohh5> <td data-astro-cid-vo5oohh5>Qwen3 1.7B</td> <td data-astro-cid-vo5oohh5>~1.3 GB</td> <td data-astro-cid-vo5oohh5>~4 GB</td> <td data-astro-cid-vo5oohh5>Very fast</td> <td data-astro-cid-vo5oohh5>Great speed-to-smarts ratio, solid multilingual (incl. German)</td> <td data-astro-cid-vo5oohh5>Struggles with long, tangled braindumps</td> <td data-astro-cid-vo5oohh5>8 GB laptops that should stay snappy</td> <td data-astro-cid-vo5oohh5>Apache-2.0</td> </tr> <tr data-astro-cid-vo5oohh5> <td data-astro-cid-vo5oohh5>Qwen3 4B</td> <td data-astro-cid-vo5oohh5>~2.4 GB</td> <td data-astro-cid-vo5oohh5>~6 GB</td> <td data-astro-cid-vo5oohh5>Fast</td> <td data-astro-cid-vo5oohh5>The sweet spot: reliable extraction, good dates, good German and English</td> <td data-astro-cid-vo5oohh5>Not a great writer for longer texts</td> <td data-astro-cid-vo5oohh5>Most people – the usual recommendation on 8–16 GB</td> <td data-astro-cid-vo5oohh5>Apache-2.0</td> </tr> <tr data-astro-cid-vo5oohh5> <td data-astro-cid-vo5oohh5>Qwen3 8B</td> <td data-astro-cid-vo5oohh5>~4.7 GB</td> <td data-astro-cid-vo5oohh5>~10 GB</td> <td data-astro-cid-vo5oohh5>Comfortable</td> <td data-astro-cid-vo5oohh5>Noticeably smarter, handles messy multi-topic dumps well</td> <td data-astro-cid-vo5oohh5>Needs 16 GB to feel good; slow on older x86</td> <td data-astro-cid-vo5oohh5>16 GB machines, especially Apple Silicon</td> <td data-astro-cid-vo5oohh5>Apache-2.0</td> </tr> <tr data-astro-cid-vo5oohh5> <td data-astro-cid-vo5oohh5>Qwen3 14B</td> <td data-astro-cid-vo5oohh5>~8.5 GB</td> <td data-astro-cid-vo5oohh5>~16 GB</td> <td data-astro-cid-vo5oohh5>Leisurely</td> <td data-astro-cid-vo5oohh5>Strong reasoning and writing, rarely misreads intent</td> <td data-astro-cid-vo5oohh5>Heavy; only pleasant with 24 GB+ or a strong GPU</td> <td data-astro-cid-vo5oohh5>Powerful desktops that want quality over speed</td> <td data-astro-cid-vo5oohh5>Apache-2.0</td> </tr> <tr data-astro-cid-vo5oohh5> <td data-astro-cid-vo5oohh5>Qwen3 30B-A3B</td> <td data-astro-cid-vo5oohh5>~18 GB</td> <td data-astro-cid-vo5oohh5>~24 GB+</td> <td data-astro-cid-vo5oohh5>Fast <em data-astro-cid-vo5oohh5>for its size</em></td> <td data-astro-cid-vo5oohh5>Mixture-of-experts: big-model quality, but only ~3B parameters active per answer – so it answers quickly once loaded</td> <td data-astro-cid-vo5oohh5>Huge download and RAM footprint; long initial load</td> <td data-astro-cid-vo5oohh5>32 GB+ machines that want the best local quality</td> <td data-astro-cid-vo5oohh5>Apache-2.0</td> </tr> <tr class="family" data-astro-cid-vo5oohh5><th colspan="8" data-astro-cid-vo5oohh5>Phi-4 (Microsoft)</th></tr> <tr data-astro-cid-vo5oohh5> <td data-astro-cid-vo5oohh5>Phi-4-mini (3.8B)</td> <td data-astro-cid-vo5oohh5>~2.3 GB</td> <td data-astro-cid-vo5oohh5>~6 GB</td> <td data-astro-cid-vo5oohh5>Fast</td> <td data-astro-cid-vo5oohh5>Punches above its weight at logic and structured tasks</td> <td data-astro-cid-vo5oohh5>English-leaning; German is usable but not its strength</td> <td data-astro-cid-vo5oohh5>8 GB machines with mostly English input</td> <td data-astro-cid-vo5oohh5>MIT</td> </tr> <tr data-astro-cid-vo5oohh5> <td data-astro-cid-vo5oohh5>Phi-4 (14B)</td> <td data-astro-cid-vo5oohh5>~8.5 GB</td> <td data-astro-cid-vo5oohh5>~16 GB</td> <td data-astro-cid-vo5oohh5>Leisurely</td> <td data-astro-cid-vo5oohh5>Excellent reasoning and math for its class</td> <td data-astro-cid-vo5oohh5>Same English lean; dry writing style</td> <td data-astro-cid-vo5oohh5>Analytical work on 24 GB+ machines</td> <td data-astro-cid-vo5oohh5>MIT</td> </tr> <tr class="family" data-astro-cid-vo5oohh5><th colspan="8" data-astro-cid-vo5oohh5>Mistral</th></tr> <tr data-astro-cid-vo5oohh5> <td data-astro-cid-vo5oohh5>Mistral 7B</td> <td data-astro-cid-vo5oohh5>~4.1 GB</td> <td data-astro-cid-vo5oohh5>~9 GB</td> <td data-astro-cid-vo5oohh5>Comfortable</td> <td data-astro-cid-vo5oohh5>Reliable all-rounder, strong European languages (German, French …)</td> <td data-astro-cid-vo5oohh5>Older design; newer 4B models often match it</td> <td data-astro-cid-vo5oohh5>16 GB machines with lots of German input</td> <td data-astro-cid-vo5oohh5>Apache-2.0</td> </tr> <tr data-astro-cid-vo5oohh5> <td data-astro-cid-vo5oohh5>Mistral Small (24B)</td> <td data-astro-cid-vo5oohh5>~14 GB</td> <td data-astro-cid-vo5oohh5>~20–24 GB</td> <td data-astro-cid-vo5oohh5>Leisurely</td> <td data-astro-cid-vo5oohh5>Near-flagship quality, excellent German, great writer</td> <td data-astro-cid-vo5oohh5>Big; needs 32 GB to breathe</td> <td data-astro-cid-vo5oohh5>32 GB+ machines, writing-heavy use</td> <td data-astro-cid-vo5oohh5>Apache-2.0</td> </tr> <tr class="family" data-astro-cid-vo5oohh5><th colspan="8" data-astro-cid-vo5oohh5>Granite (IBM)</th></tr> <tr data-astro-cid-vo5oohh5> <td data-astro-cid-vo5oohh5>Granite 8B</td> <td data-astro-cid-vo5oohh5>~4.7 GB</td> <td data-astro-cid-vo5oohh5>~10 GB</td> <td data-astro-cid-vo5oohh5>Comfortable</td> <td data-astro-cid-vo5oohh5>Sober, precise, good at following instructions to the letter</td> <td data-astro-cid-vo5oohh5>English-leaning; plain, businesslike tone</td> <td data-astro-cid-vo5oohh5>Work assistants that should be strictly no-nonsense</td> <td data-astro-cid-vo5oohh5>Apache-2.0</td> </tr> <tr class="family" data-astro-cid-vo5oohh5><th colspan="8" data-astro-cid-vo5oohh5>DeepSeek-R1 (distilled)</th></tr> <tr data-astro-cid-vo5oohh5> <td data-astro-cid-vo5oohh5>DeepSeek-R1 7B</td> <td data-astro-cid-vo5oohh5>~4.4 GB</td> <td data-astro-cid-vo5oohh5>~10 GB</td> <td data-astro-cid-vo5oohh5>Patient</td> <td data-astro-cid-vo5oohh5>“Thinks out loud” before answering – strongest small model for tricky, multi-step problems</td> <td data-astro-cid-vo5oohh5>The thinking step makes every answer slower; overkill for simple to-dos; thinking text is often English</td> <td data-astro-cid-vo5oohh5>Puzzling things out, planning, untangling complicated dumps</td> <td data-astro-cid-vo5oohh5>MIT</td> </tr> <tr class="family" data-astro-cid-vo5oohh5><th colspan="8" data-astro-cid-vo5oohh5>Llama (Meta)</th></tr> <tr data-astro-cid-vo5oohh5> <td data-astro-cid-vo5oohh5>Llama 3.2 1B</td> <td data-astro-cid-vo5oohh5>~0.8 GB</td> <td data-astro-cid-vo5oohh5>~3 GB</td> <td data-astro-cid-vo5oohh5>Instant</td> <td data-astro-cid-vo5oohh5>Very light, fine for simple extraction</td> <td data-astro-cid-vo5oohh5>Weak German, misses nuance</td> <td data-astro-cid-vo5oohh5>Minimal hardware, English-only use</td> <td data-astro-cid-vo5oohh5>Llama license*</td> </tr> <tr data-astro-cid-vo5oohh5> <td data-astro-cid-vo5oohh5>Llama 3.2 3B</td> <td data-astro-cid-vo5oohh5>~2 GB</td> <td data-astro-cid-vo5oohh5>~5 GB</td> <td data-astro-cid-vo5oohh5>Very fast</td> <td data-astro-cid-vo5oohh5>Friendly tone, good everyday English</td> <td data-astro-cid-vo5oohh5>German noticeably weaker than Qwen3/Gemma at this size</td> <td data-astro-cid-vo5oohh5>8 GB laptops, English-first users</td> <td data-astro-cid-vo5oohh5>Llama license*</td> </tr> <tr data-astro-cid-vo5oohh5> <td data-astro-cid-vo5oohh5>Llama 3.1 8B</td> <td data-astro-cid-vo5oohh5>~4.6 GB</td> <td data-astro-cid-vo5oohh5>~10 GB</td> <td data-astro-cid-vo5oohh5>Comfortable</td> <td data-astro-cid-vo5oohh5>Very well-rounded, warm writing voice, huge community know-how</td> <td data-astro-cid-vo5oohh5>German solid but not stellar</td> <td data-astro-cid-vo5oohh5>16 GB machines, conversational assistants</td> <td data-astro-cid-vo5oohh5>Llama license*</td> </tr> <tr class="family" data-astro-cid-vo5oohh5><th colspan="8" data-astro-cid-vo5oohh5>Gemma 3 (Google)</th></tr> <tr data-astro-cid-vo5oohh5> <td data-astro-cid-vo5oohh5>Gemma 3 4B</td> <td data-astro-cid-vo5oohh5>~2.5 GB</td> <td data-astro-cid-vo5oohh5>~6 GB</td> <td data-astro-cid-vo5oohh5>Fast</td> <td data-astro-cid-vo5oohh5>Excellent multilingual quality (German included) for its size, pleasant writer</td> <td data-astro-cid-vo5oohh5>Occasionally over-cautious in phrasing</td> <td data-astro-cid-vo5oohh5>8 GB machines with mixed-language input</td> <td data-astro-cid-vo5oohh5>Gemma terms**</td> </tr> <tr data-astro-cid-vo5oohh5> <td data-astro-cid-vo5oohh5>Gemma 3 12B</td> <td data-astro-cid-vo5oohh5>~7 GB</td> <td data-astro-cid-vo5oohh5>~14 GB</td> <td data-astro-cid-vo5oohh5>Leisurely</td> <td data-astro-cid-vo5oohh5>Big step up in nuance and writing, strong German</td> <td data-astro-cid-vo5oohh5>Wants 16 GB+, ideally more</td> <td data-astro-cid-vo5oohh5>16–32 GB machines, writing and summarizing</td> <td data-astro-cid-vo5oohh5>Gemma terms**</td> </tr> <tr data-astro-cid-vo5oohh5> <td data-astro-cid-vo5oohh5>Gemma 3 27B</td> <td data-astro-cid-vo5oohh5>~16 GB</td> <td data-astro-cid-vo5oohh5>~24 GB+</td> <td data-astro-cid-vo5oohh5>Patient</td> <td data-astro-cid-vo5oohh5>Among the best local models overall, superb multilingual</td> <td data-astro-cid-vo5oohh5>Heavy download, heavy RAM, slow on anything but strong hardware</td> <td data-astro-cid-vo5oohh5>32 GB+ machines wanting maximum quality</td> <td data-astro-cid-vo5oohh5>Gemma terms**</td> </tr> </tbody> </table> </div> <p class="muted" data-astro-cid-vo5oohh5>
-* Llama models use Meta's community license. It's free for this kind of use, but requires
-      the “Built with Llama” attribution – Cardo shows it for you where the model is active.
-<br data-astro-cid-vo5oohh5>
-** Gemma models are covered by Google's own Gemma Terms of Use rather than a classic
-      open-source license. Cardo shows you the terms and asks for your consent <em data-astro-cid-vo5oohh5>before</em>
-the download starts – never after. Everything else in the table is Apache-2.0 or MIT:
-      no strings attached.
-</p> <h3 data-astro-cid-vo5oohh5>Rule of thumb by machine</h3> <ul data-astro-cid-vo5oohh5> <li data-astro-cid-vo5oohh5> <strong data-astro-cid-vo5oohh5>8 GB laptop:</strong> Qwen3 0.6B–4B, Llama 3.2 1B/3B, Phi-4-mini or Gemma 3 4B.
-        Qwen3 4B is the usual recommendation; if it feels sluggish, drop to 1.7B – a fast small
-        model beats a slow big one every day.
-</li> <li data-astro-cid-vo5oohh5> <strong data-astro-cid-vo5oohh5>16 GB:</strong> Qwen3 8B, Llama 3.1 8B, Mistral 7B, Granite 8B or DeepSeek-R1 7B
-        run comfortably. Gemma 3 12B and the 14B models fit, but they're the upper edge –
-        expect them to take their time.
-</li> <li data-astro-cid-vo5oohh5> <strong data-astro-cid-vo5oohh5>32 GB and up:</strong> everything above, plus Qwen3 14B/30B-A3B, Mistral Small
-        24B and Gemma 3 27B. Here quality is the only question – pick by strengths, not by fit.
-</li> </ul> </section> <section class="card step" data-astro-cid-vo5oohh5> <h2 data-astro-cid-vo5oohh5>Personality, working style, memory: three plain files</h2> <p data-astro-cid-vo5oohh5>
-Your assistant is not a black box. Everything that shapes it lives in three readable
-      Markdown files on your disk – you can see (and edit) all of them under
-<em data-astro-cid-vo5oohh5>Settings → Assistant → Advanced</em>:
-</p> <ul data-astro-cid-vo5oohh5> <li data-astro-cid-vo5oohh5> <strong data-astro-cid-vo5oohh5><code data-astro-cid-vo5oohh5>personality.md</code> – who it is.</strong> Its name, what it calls you,
-        its tone (short &amp; direct / friendly / detailed) and its language. Generated from
-        your answers to the personality questions; edit it any time.
-</li> <li data-astro-cid-vo5oohh5> <strong data-astro-cid-vo5oohh5><code data-astro-cid-vo5oohh5>instructions.md</code> – how it works.</strong> The working rules: turn
-        braindumps into concrete proposals, resolve “tomorrow” into a real date, never invent
-        commands, when unsure propose anyway and let you fix it via <em data-astro-cid-vo5oohh5>Edit</em>.
-</li> <li data-astro-cid-vo5oohh5> <strong data-astro-cid-vo5oohh5><code data-astro-cid-vo5oohh5>memory.md</code> – what it knows about you.</strong> Durable facts, one
-        line each: preferences, recurring situations and how you like them solved, background
-        that keeps coming up.
-</li> </ul> <p data-astro-cid-vo5oohh5>
-The memory follows two simple rules. First: <strong data-astro-cid-vo5oohh5>the assistant checks its memory before
-      asking you anything</strong> – if it already knows your dentist is Dr. Weber, it fills
-      that in instead of asking again. Second: <strong data-astro-cid-vo5oohh5>you always see what it remembers.</strong>
-Whenever it saves something new, a <em data-astro-cid-vo5oohh5>“Remembered:”</em> line appears right in the
-      conversation – and every entry has a <strong data-astro-cid-vo5oohh5>✕ “forget this”</strong> next to it. One
-      click, and it's gone from the file. No hidden profile, ever.
-</p> </section> <section class="card step" data-astro-cid-vo5oohh5> <h2 data-astro-cid-vo5oohh5>Multiple assistants: one for each part of your life</h2> <p data-astro-cid-vo5oohh5>
-You don't have to squeeze everything into one assistant. Create as many as you like, each
-      with its own name, personality and job. A worked example:
-</p> <ul data-astro-cid-vo5oohh5> <li data-astro-cid-vo5oohh5> <strong data-astro-cid-vo5oohh5>Hanna</strong> – your work assistant. Tools: tasks and calendar only. Style:
-        short &amp; direct. You dump your Monday chaos on her, she answers in bullet-length
-        cards and never chats.
-</li> <li data-astro-cid-vo5oohh5> <strong data-astro-cid-vo5oohh5>Felix</strong> – your writing companion. Tools: notes only. Style: warm and
-        wordy. He helps you draft, rephrase and untangle texts, and never touches your calendar.
-</li> </ul> <p data-astro-cid-vo5oohh5> <strong data-astro-cid-vo5oohh5>They share one memory by default.</strong> That's deliberate: when you tell Hanna
-      you're on vacation in August and later ask Felix to draft an out-of-office note, Felix
-      already knows. Nothing gets lost just because you switched assistants. If you want a hard
-      wall instead – say, a strict split between work and private life, where the work assistant
-      must know <em data-astro-cid-vo5oohh5>nothing</em> personal – you can give an assistant its own separate memory
-      file in its settings. Shared is the default; separate is one switch.
-</p> <p data-astro-cid-vo5oohh5> <strong data-astro-cid-vo5oohh5>Tool scopes</strong> keep each assistant honest: Hanna literally cannot create a
-      note, Felix cannot move an appointment – each one only sees the commands of the tools you
-      gave it. <strong data-astro-cid-vo5oohh5>Templates</strong> (work assistant, writing companion, planning helper …)
-      give you a sensible starting point in one click, and you can
-<strong data-astro-cid-vo5oohh5>export and import profiles</strong> as files – to move an assistant to your other
-      machine, or to share a well-tuned one with a friend. Profiles contain the setup, not your
-      memory, unless you explicitly include it.
-</p> </section> <section class="card step" data-astro-cid-vo5oohh5> <h2 data-astro-cid-vo5oohh5>Teams: several assistants, one conversation</h2> <p data-astro-cid-vo5oohh5>
-Once you have a few assistants, you can group them into a <strong data-astro-cid-vo5oohh5>team</strong> and talk
-      to the team instead of picking who to ask. Behind the scenes a
-<strong data-astro-cid-vo5oohh5>silent leader</strong> – always the fastest installed model, because its only job
-      is routing – reads each question and hands it to the best-suited member. Silent means it
-      never answers you itself; <strong data-astro-cid-vo5oohh5>you always see who answered</strong>, right on the reply.
-</p> <p data-astro-cid-vo5oohh5>
-Example – <em data-astro-cid-vo5oohh5>Group 1: Hanna, Felix, Simon</em> (Simon being a research-minded assistant
-      on a larger model):
-</p> <ul data-astro-cid-vo5oohh5> <li data-astro-cid-vo5oohh5>
-“Move my Thursday 1-on-1 to Friday and remind me to prep” → the leader routes it to
-<strong data-astro-cid-vo5oohh5>Hanna</strong> (calendar + tasks are her competence). Her cards appear, labeled
-<em data-astro-cid-vo5oohh5>Hanna</em>.
-</li> <li data-astro-cid-vo5oohh5>
-“Help me rewrite the intro of my blog post so it sounds less stiff” → routed to
-<strong data-astro-cid-vo5oohh5>Felix</strong>. Warm, wordy, labeled <em data-astro-cid-vo5oohh5>Felix</em>.
-</li> </ul> <p data-astro-cid-vo5oohh5> <strong data-astro-cid-vo5oohh5>When is a team worth it?</strong> If you have genuinely different jobs (planning
-      vs. writing vs. thinking) that profit from different personalities or different model
-      sizes, a team saves you the constant “who do I ask?”. If one assistant covers your day
-      fine, stay with one – simpler is better here.
-</p> <p class="muted" data-astro-cid-vo5oohh5>
-The honest part about RAM: your machine can only hold so many models in memory at once.
-      When the leader routes to a member whose model isn't currently loaded, Cardo swaps models
-      – which means a short loading moment before that answer. Nothing is wrong; that's the
-      price of running everything locally, and Cardo shows a loading state so you know what's
-      happening.
-</p> </section> <section class="card step" data-astro-cid-vo5oohh5> <h2 data-astro-cid-vo5oohh5>Delegation: assistants that know their limits</h2> <p data-astro-cid-vo5oohh5>
-Even outside teams, assistants know about each other. Ask Hanna to polish a paragraph and
-      she won't bluff – you get a card: <em data-astro-cid-vo5oohh5>“Felix is better at this – hand it over?”</em> One
-      click and Felix takes the request, with the same context; decline and Hanna does her best
-      herself. Nothing is handed over without your confirmation, same as everything else.
-</p> <p data-astro-cid-vo5oohh5>
-What drives this are <strong data-astro-cid-vo5oohh5>competences</strong>: every assistant's profile lists what
-      it's good at – derived from its tool scope, its model's strengths and its template. And
-      competences are <strong data-astro-cid-vo5oohh5>learned</strong>, too: when you accept a hand-over, that kind of
-      request counts toward the receiving assistant's competences; when you decline, the system
-      takes the hint. Over time, delegation suggestions match how <em data-astro-cid-vo5oohh5>you</em> actually divide
-      the work – you can view and edit each assistant's competence list in its settings at any
-      time.
-</p> </section> <section class="card step" data-astro-cid-vo5oohh5> <h2 data-astro-cid-vo5oohh5>Using Claude (subscription) — optional cloud power</h2> <p data-astro-cid-vo5oohh5>
-Besides the local models, Cardo can use <strong data-astro-cid-vo5oohh5>Claude</strong> (Fable 5, Opus, Sonnet,
-      Haiku) as an assistant brain — through the Claude Code CLI and your existing Anthropic
-      subscription. No API keys, no extra costs beyond your plan; usage counts against your
-      plan's quota.
-</p> <p data-astro-cid-vo5oohh5><strong data-astro-cid-vo5oohh5>What you need:</strong> a Claude subscription (Pro/Max), the
-<a href="https://claude.com/claude-code" rel="noopener" data-astro-cid-vo5oohh5>Claude Code CLI</a> installed,
-      and one sign-in (<code data-astro-cid-vo5oohh5>claude</code> in a terminal). Cardo detects the CLI automatically
-      and walks you through it in Settings → Assistant.</p> <p data-astro-cid-vo5oohh5><strong data-astro-cid-vo5oohh5>The honest privacy difference:</strong> local models never send anything
-      anywhere. A Claude assistant needs the internet, and your chat content — plus any
-      workspace files Claude reads — is transmitted to Anthropic. Cardo says this clearly
-      before you enable it, in keeping with the traffic-light principle. Mixing works well:
-      keep a private local assistant for personal things and a Claude assistant for heavy
-      lifting.</p> <p data-astro-cid-vo5oohh5><strong data-astro-cid-vo5oohh5>Files:</strong> Claude works agentically inside your notes folder (create,
-      read, edit — e.g. “draft a packing list as packliste.md”). It cannot touch Cardo's app
-      data, settings or other assistants — its workspace is strictly your own files. Local
-      models can manage files too, via proposal cards; how well depends on their size.</p> </section> <section class="card" style="margin-top:1.25rem" data-astro-cid-vo5oohh5> <h2 data-astro-cid-vo5oohh5>FAQ</h2> <details data-astro-cid-vo5oohh5> <summary data-astro-cid-vo5oohh5>How much RAM do I really need?</summary> <p data-astro-cid-vo5oohh5>
-The assistant starts at about 2–3 GB of free RAM for the smallest model (Qwen3 0.6B).
-        A comfortable everyday setup is 8 GB total with a ~4B model; 16 GB opens up the 7–8B
-        class; 12B+ models want 16–32 GB. The system check in <em data-astro-cid-vo5oohh5>Settings → Assistant</em>
-rates every model against your actual machine before you download anything.
-</p> </details> <details data-astro-cid-vo5oohh5> <summary data-astro-cid-vo5oohh5>How fast will it feel?</summary> <p data-astro-cid-vo5oohh5>
-Local models answer in a visible stream, not instantly. Small models (≤2B) feel
-        immediate; mid-size models (4–8B) take a few seconds for a typical braindump; large
-        models take noticeably longer but understand more. Apple Silicon Macs are markedly
-        faster than comparable x86 machines for this workload. If waiting annoys you, choose a
-        smaller model – responsiveness matters more than the last bit of cleverness.
-</p> </details> <details data-astro-cid-vo5oohh5> <summary data-astro-cid-vo5oohh5>Which models are good at German (or other languages)?</summary> <p data-astro-cid-vo5oohh5>
-Qwen3, Gemma 3 and Mistral are the strongest German speakers per size class, and handle
-        many other languages well. Llama is solid but English-leaning, especially in the small
-        3.2 models. Phi-4 and Granite are clearly English-first – fine for understanding German
-        input, less polished when writing it. DeepSeek-R1 answers fine in German, but its
-        visible “thinking” text often stays English.
-</p> </details> <details data-astro-cid-vo5oohh5> <summary data-astro-cid-vo5oohh5>What about licenses?</summary> <p data-astro-cid-vo5oohh5>
-Qwen3, Mistral and Granite are Apache-2.0; Phi-4 and DeepSeek-R1 are MIT – use freely.
-        Llama models use Meta's community license, which requires a “Built with Llama” notice
-        (Cardo displays it for you). Gemma models are under Google's Gemma Terms of Use; Cardo
-        shows you those terms and asks for your consent before the download begins.
-</p> </details> <details data-astro-cid-vo5oohh5> <summary data-astro-cid-vo5oohh5>Why does it load for a few seconds when I switch assistants?</summary> <p data-astro-cid-vo5oohh5>
-If the assistant you switch to uses a different model than the one currently in memory,
-        Cardo has to unload one and load the other from disk. That's the short loading moment –
-        it's normal, it's local, and it's the trade-off for being able to run several models on
-        one machine. Assistants sharing the same model switch instantly.
-</p> </details> <details data-astro-cid-vo5oohh5> <summary data-astro-cid-vo5oohh5>Is anything sent to a server?</summary> <p data-astro-cid-vo5oohh5>
-No. Your prompts, files, memory and answers never leave your device – the model runs
-        inside Cardo, not in a cloud. The single exception is the model download itself: when
-        you click install, the model file is fetched from <code data-astro-cid-vo5oohh5>huggingface.co</code>. That
-        request transfers the file to you; it does not carry your data anywhere.
-</p> </details> <details data-astro-cid-vo5oohh5> <summary data-astro-cid-vo5oohh5>Can I use it offline?</summary> <p data-astro-cid-vo5oohh5>
-Yes – completely, once a model is downloaded. Plane, dead zone, deliberately offline
-        machine: the assistant keeps working exactly the same. It never needs to phone home,
-        because there is no home to phone.
-</p> </details> <p style="margin-top:1rem" data-astro-cid-vo5oohh5>
-More questions? The <a href="/cardo-app/docs" data-astro-cid-vo5oohh5>docs</a> cover the rest of Cardo, and the
-<a href="https://github.com/hollatzleif/cardo-app/discussions" rel="noopener" data-astro-cid-vo5oohh5>forum</a> is open for everything else. Don't have Cardo
-      yet? It's on the <a href="/cardo-app/download" data-astro-cid-vo5oohh5>download page</a> – free, no account.
-</p> </section>   </main> <footer class="site-footer"> <p>
-Cardo is local-first: your data stays on your device. No account, no tracking –
-        this website sets no cookies either.
-</p> <p> <a href="https://github.com/hollatzleif/cardo-app" rel="noopener">GitHub</a> ·
-<a href="https://github.com/hollatzleif/cardo-app/discussions" rel="noopener">Forum</a> ·
-<a href="/cardo-app/privacy">Privacy</a> </p> </footer>  </body> </html>
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Assistant · Cardo</title><meta name="robots" content="noindex"><link rel="canonical" href="/cardo-app/#assistant-detail"><meta http-equiv="refresh" content="0; url=/cardo-app/#assistant-detail"><link rel="icon" type="image/png" href="/cardo-app/favicon.png"><style>
+      :root { --base: #1e1e2e;
+        --surface-0: #313244;
+        --surface-1: #45475a;
+        --surface-2: #585b70;
+        --text: #cdd6f4;
+        --text-muted: #a6adc8;
+        --accent: #89b4fa;
+        --success: #a6e3a1;
+        --warning: #f9e2af;
+        --danger: #f38ba8;
+        --info: #89dceb;
+        --bg-canvas: #1e1e2e;
+        --bg-widget: #313244;
+        --bg-widget-hover: #45475a;
+        --bg-raised: #45475a;
+        --text-primary: #cdd6f4;
+        --border-subtle: #585b70;
+        --accent-text: #1e1e2e;
+        --accent-1: #89b4fa;
+        --accent-2: #cba6f7;
+        --accent-3: #94e2d5;
+        --accent-4: #fab387;
+        --accent-5: #f5c2e7;
+        --accent-6: #a6e3a1;
+        --accent-7: #f9e2af;
+        --accent-8: #b4befe; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        background: var(--base);
+        color: var(--text);
+        text-align: center;
+        padding: 2rem;
+      }
+      a { color: var(--accent); }
+    </style></head> <body> <p> The assistant page now lives on the main page.<br> <a href="/cardo-app/#assistant-detail">Continue to Cardo →</a> </p> </body></html>

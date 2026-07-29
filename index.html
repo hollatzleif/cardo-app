@@ -1,24 +1,730 @@
-<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Cardo – your personal, local-first dashboard · Cardo</title><meta name="description" content="Cardo – your pivot point. A freely arrangeable dashboard that gathers everything in one calm place. Local-first, free, no account."><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://cardo-polls.hollatzleif.workers.dev; frame-src 'none'; object-src 'none'; base-uri 'self'"><link rel="icon" type="image/png" href="/cardo-app/favicon.png"><link rel="icon" type="image/x-icon" href="/cardo-app/favicon.ico" sizes="any"><link rel="apple-touch-icon" href="/cardo-app/apple-touch-icon.png"><style>:root{--base: #1e1e2e;--surface-0: #313244;--surface-1: #45475a;--text: #cdd6f4;--text-muted: #a6adc8;--accent: #89b4fa;--success: #a6e3a1;--warning: #f9e2af;--danger: #f38ba8;--radius: 12px}@media(prefers-color-scheme:light){:root{--base: #eff1f5;--surface-0: #e6e9ef;--surface-1: #ccd0da;--text: #4c4f69;--text-muted: #6c6f85;--accent: #1e66f5;--success: #40a02b;--warning: #df8e1d;--danger: #d20f39}}*{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;background:var(--base);color:var(--text);line-height:1.6}a{color:var(--accent)}main{max-width:900px;margin:0 auto;padding:2rem 1.25rem 4rem}.site-header{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem;padding:.9rem 1.25rem;border-bottom:1px solid var(--surface-1);position:sticky;top:0;background:var(--base);z-index:10}.brand{font-weight:800;text-decoration:none;font-size:1.15rem}.site-header nav{display:flex;gap:.25rem;flex-wrap:wrap}.site-header nav a{text-decoration:none;color:var(--text-muted);padding:.35rem .7rem;border-radius:8px}.site-header nav a.active,.site-header nav a:hover{color:var(--text);background:var(--surface-0)}.site-footer{border-top:1px solid var(--surface-1);padding:1.5rem 1.25rem;color:var(--text-muted);font-size:.9rem;text-align:center}.card{background:var(--surface-0);border:1px solid var(--surface-1);border-radius:var(--radius);padding:1.25rem}.btn{display:inline-block;background:var(--accent);color:var(--base);padding:.6rem 1.2rem;border-radius:10px;text-decoration:none;font-weight:700;border:none;cursor:pointer;font-size:1rem}.btn--ghost{background:transparent;color:var(--accent);border:1px solid var(--accent)}.muted{color:var(--text-muted)}code,pre{font-family:ui-monospace,SF Mono,Menlo,monospace}pre{background:var(--surface-0);border:1px solid var(--surface-1);border-radius:10px;padding:.9rem 1rem;overflow-x:auto}kbd{font-family:ui-monospace,SF Mono,Menlo,monospace;font-size:.85em;background:var(--surface-0);border:1px solid var(--surface-1);border-bottom-width:2px;border-radius:6px;padding:.1em .45em}h1,h2,h3{line-height:1.25}.badge{display:inline-block;padding:.1rem .6rem;border-radius:999px;font-size:.8rem;border:1px solid var(--success);color:var(--success)}
-.copy-block[data-astro-cid-chpwp47i]{margin:.75rem 0;text-align:left}.copy-block__label[data-astro-cid-chpwp47i]{display:block;font-size:.8rem;color:var(--text-muted);margin-bottom:.3rem;text-transform:uppercase;letter-spacing:.05em}.copy-block__row[data-astro-cid-chpwp47i]{display:flex;align-items:stretch;gap:.5rem}.copy-block__pre[data-astro-cid-chpwp47i]{flex:1;margin:0;white-space:pre}.copy-block__btn[data-astro-cid-chpwp47i]{flex:none;background:var(--accent);color:var(--base);border:none;border-radius:10px;padding:0 1rem;font-weight:700;cursor:pointer;font-size:.9rem}
-.barometer[data-astro-cid-riha7gi2]{height:14px;border-radius:999px;background:var(--surface-1);overflow:hidden;margin:.75rem 0 .25rem}.barometer__fill[data-astro-cid-riha7gi2]{height:100%;background:var(--success);border-radius:999px}.barometer-done[data-astro-cid-riha7gi2]{border:1px solid var(--success);border-radius:var(--radius);padding:.75rem 1rem;color:var(--success)}
-.hero[data-astro-cid-j7pv25f6]{text-align:center;padding:2.5rem 0 2rem}.hero[data-astro-cid-j7pv25f6] h1[data-astro-cid-j7pv25f6]{font-size:2.4rem;margin-bottom:.75rem}.hero[data-astro-cid-j7pv25f6] em[data-astro-cid-j7pv25f6]{color:var(--accent);font-style:normal}.hero[data-astro-cid-j7pv25f6] p[data-astro-cid-j7pv25f6]{max-width:640px;margin:.75rem auto}.hero[data-astro-cid-j7pv25f6] .btn[data-astro-cid-j7pv25f6]{margin:.4rem}.hero__install[data-astro-cid-j7pv25f6]{max-width:560px;margin:1.25rem auto .5rem}.features[data-astro-cid-j7pv25f6]{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;margin-top:2rem}
-</style></head> <body> <header class="site-header"> <a class="brand" href="/cardo-app/">⊕ Cardo</a> <nav> <a href="/cardo-app/" class>Home</a><a href="/cardo-app/download" class>Download</a><a href="/cardo-app/docs" class>Docs</a><a href="/cardo-app/docs/tutorial" class>Tutorial</a><a href="/cardo-app/assistant" class>Your Assistant</a><a href="https://github.com/hollatzleif/cardo-app/discussions" rel="noopener" class>Forum ↗</a><a href="/cardo-app/polls" class>Polls</a><a href="/cardo-app/donate" class>Donate</a> </nav> </header> <main>  <section class="hero" data-astro-cid-j7pv25f6> <h1 data-astro-cid-j7pv25f6>Cardo brings everything into one place.<br data-astro-cid-j7pv25f6>Arranged the way <em data-astro-cid-j7pv25f6>you</em> want it.</h1> <p class="muted" data-astro-cid-j7pv25f6> <strong data-astro-cid-j7pv25f6>Cardo</strong> is a free, freely arrangeable dashboard app for macOS, Linux and
-      Windows: to-dos, notes, calendar, files, Anki-class flashcards, a legal-paragraph book, a
-      local AI assistant and close to 50 tools – as widgets on your personal board, with optional
-      end-to-end-encrypted sync between your devices. Built for everyone who feels overwhelmed and
-      needs <strong data-astro-cid-j7pv25f6>one</strong> calm place where everything comes together. Your pivot point.
-</p> <div class="hero__install" data-astro-cid-j7pv25f6> <div class="copy-block" data-astro-cid-chpwp47i> <span class="copy-block__label" data-astro-cid-chpwp47i>Install (macOS / Linux)</span> <div class="copy-block__row" data-astro-cid-chpwp47i> <pre class="copy-block__pre" data-astro-cid-chpwp47i><code data-astro-cid-chpwp47i>curl -fsSL https://hollatzleif.github.io/cardo-app/install.sh | sh</code></pre> <button class="copy-block__btn" type="button" data-copy="curl -fsSL https://hollatzleif.github.io/cardo-app/install.sh | sh" aria-label="Copy command to clipboard" data-astro-cid-chpwp47i>Copy</button> </div> </div> <script type="module">for(const t of document.querySelectorAll(".copy-block__btn"))t.addEventListener("click",async()=>{try{await navigator.clipboard.writeText(t.dataset.copy??""),t.textContent="Copied!",setTimeout(()=>{t.textContent="Copy"},2e3)}catch{}});</script>  </div> <p data-astro-cid-j7pv25f6> <a class="btn" href="/cardo-app/download#macos" data-astro-cid-j7pv25f6>macOS (.dmg)</a> <a class="btn" href="/cardo-app/download#windows" data-astro-cid-j7pv25f6>Windows (.msi)</a> <a class="btn" href="/cardo-app/download#linux" data-astro-cid-j7pv25f6>Linux (.AppImage)</a> </p> <p data-astro-cid-j7pv25f6><span class="badge" data-astro-cid-j7pv25f6>● 100 % local</span> <span class="muted" data-astro-cid-j7pv25f6>Your data never leaves your device. No account, no forced cloud, no tracking.</span></p> </section> <section class="features" data-astro-cid-j7pv25f6> <div class="card" data-astro-cid-j7pv25f6> <h3 data-astro-cid-j7pv25f6>🔒 Local-first, for real</h3> <p data-astro-cid-j7pv25f6>Cardo works 100 % offline. Everything lives in an embedded SQLite database on your machine – no server, no account, no telemetry. Zero setup: install, open, done.</p> </div> <div class="card" data-astro-cid-j7pv25f6> <h3 data-astro-cid-j7pv25f6>🧩 Your dashboard, your rules</h3> <p data-astro-cid-j7pv25f6>Start from a blank canvas. Place, move and resize widgets, keep separate pages for work, home and focus. Make it yours with design presets, themes, card styles and fonts. Cardo adapts to how you think – not the other way around.</p> </div> <div class="card" data-astro-cid-j7pv25f6> <h3 data-astro-cid-j7pv25f6>🧠 A local AI assistant</h3> <p data-astro-cid-j7pv25f6>Dump your thoughts, get back proposal cards – appointments, to-dos, notes – applied only when you say yes. It runs 100 % on your device. Prefer cloud power? Bring your own <a href="/cardo-app/assistant" data-astro-cid-j7pv25f6>Claude subscription</a> instead. Your choice, every time.</p> </div> <div class="card" data-astro-cid-j7pv25f6> <h3 data-astro-cid-j7pv25f6>📄 Notes &amp; files that stay yours</h3> <p data-astro-cid-j7pv25f6>Write Markdown notes with <code data-astro-cid-j7pv25f6>[[wiki-links]]</code>, backlinks and rendered LaTeX, and browse your notes folder – text, images, PDFs – right inside Cardo. Real files in a folder you own, readable with any editor.</p> </div> <div class="card" data-astro-cid-j7pv25f6> <h3 data-astro-cid-j7pv25f6>🃏 Anki-class flashcards</h3> <p data-astro-cid-j7pv25f6>Real spaced repetition: note types with templates and cloze deletions, the modern FSRS scheduler (or classic SM-2), a card browser and stats – and import or export your existing Anki decks as <code data-astro-cid-j7pv25f6>.apkg</code>. All fully local.</p> </div> <div class="card" data-astro-cid-j7pv25f6> <h3 data-astro-cid-j7pv25f6>⚖️ Statutes at your fingertips</h3> <p data-astro-cid-j7pv25f6>For lawyers and students: keep the sections you work with, annotated and searchable. Fetch the official text of a § straight from legal sources – Germany, EU, UK, Austria – with its “as of” date, or just type your own. Public statute text, stored on your device.</p> </div> <div class="card" data-astro-cid-j7pv25f6> <h3 data-astro-cid-j7pv25f6>🔑 Sync with your own key</h3> <p data-astro-cid-j7pv25f6>Optional, off by default: your to-dos, notes, settings and assistants on every device – end-to-end encrypted with a key only you hold. Carried by your own Google Drive, iCloud/Dropbox folder or WebDAV server. Whoever stores it sees only unreadable blocks.</p> </div> <div class="card" data-astro-cid-j7pv25f6> <h3 data-astro-cid-j7pv25f6>🚦 Transparency traffic light</h3> <p data-astro-cid-j7pv25f6>Every tool carries a privacy light: green means it works fully local. Yellow means it contacts the internet – and Cardo tells you in plain language what it sends and where, before anything happens.</p> </div> <div class="card" data-astro-cid-j7pv25f6> <h3 data-astro-cid-j7pv25f6>🩺 Checks itself</h3> <p data-astro-cid-j7pv25f6>One button in the settings and Cardo runs a full self-test with a readable report. If something is off, you see exactly what – no guessing, no support tickets.</p> </div> <div class="card" data-astro-cid-j7pv25f6> <h3 data-astro-cid-j7pv25f6>💙 Free, funded by donations</h3> <p data-astro-cid-j7pv25f6>Cardo is free to download and use. If you like it, a voluntary donation helps cover the year's running costs – that's it. No paywalls, no premium tiers.</p> </div> </section> <section class="card honest" style="margin-top:2rem" data-astro-cid-j7pv25f6> <h3 data-astro-cid-j7pv25f6>The honest part</h3> <p data-astro-cid-j7pv25f6>
-There is still no Cardo cloud and no account – and that's a feature. Sync is optional and
-      works with a key you generate yourself: everything is encrypted on your device before it
-      travels through storage <em data-astro-cid-j7pv25f6>you</em> choose (your Drive, your folder, your server).
-      Turn it off and Cardo is 100&nbsp;% offline again. Your data is yours, always.
-</p> </section> <section class="card" style="margin-top:2rem" data-astro-cid-j7pv25f6> <h3 data-astro-cid-j7pv25f6>Support instead of paying</h3> <p data-astro-cid-j7pv25f6>
-Cardo is free. If you want to, a donation helps cover the running costs
-      (domain, server, certificates) for the current year:
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Cardo – your personal, local-first dashboard · Cardo</title><meta name="description" content="Cardo – your pivot point. A freely arrangeable dashboard that gathers everything in one calm place. Local-first, free, no account."><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://cardo-polls.hollatzleif.workers.dev; frame-src 'none'; object-src 'none'; base-uri 'self'"><link rel="icon" type="image/png" href="/cardo-app/favicon.png"><link rel="icon" type="image/x-icon" href="/cardo-app/favicon.ico" sizes="any"><link rel="apple-touch-icon" href="/cardo-app/apple-touch-icon.png"><script>
+      // Before first paint, or the page flashes the system colours and then
+      // repaints in the chosen theme. Deliberately tiny and inline; a deferred
+      // module script would run far too late for this.
+      try {
+        var saved = localStorage.getItem('cardo-theme');
+        if (saved) document.documentElement.dataset.theme = saved;
+      } catch (e) {
+        // Private mode or blocked storage: fall back to prefers-color-scheme.
+      }
+    </script><link rel="stylesheet" href="/cardo-app/_astro/index.h-njq4fZ.css">
+<link rel="stylesheet" href="/cardo-app/_astro/admin.DwUZGD1S.css"></head> <body> <a class="skip-link" href="#main">Skip to content</a>   <main id="main" tabindex="-1">   <section class="shell" id="board" data-astro-cid-j7pv25f6> <header class="topbar" data-astro-cid-lq7i5isa> <span class="topbar__brand" data-astro-cid-lq7i5isa>Cardo</span> <div class="topbar__inbox-wrap" data-astro-cid-lq7i5isa> <button type="button" class="c-btn c-btn--ghost topbar__inbox" data-inbox aria-expanded="false" data-astro-cid-lq7i5isa> <span aria-hidden="true" data-astro-cid-lq7i5isa>✉</span> <span class="topbar__inbox-badge" data-astro-cid-lq7i5isa>3</span> <span class="sr-only" data-astro-cid-lq7i5isa>Notifications</span> </button> <div class="inbox__panel" data-inbox-panel hidden data-astro-cid-lq7i5isa> <p class="inbox__head" data-astro-cid-lq7i5isa>Inbox</p> <div class="inbox__item" data-astro-cid-lq7i5isa> <strong data-astro-cid-lq7i5isa>Cardo 1.2.0 is available</strong> <span class="c-muted" data-astro-cid-lq7i5isa>Installation checks, variant sweep, release gate.</span> </div><div class="inbox__item" data-astro-cid-lq7i5isa> <strong data-astro-cid-lq7i5isa>Poll: which tool next?</strong> <span class="c-muted" data-astro-cid-lq7i5isa>Three options, one vote per device — anonymous.</span> </div><div class="inbox__item" data-astro-cid-lq7i5isa> <strong data-astro-cid-lq7i5isa>Self-test passed</strong> <span class="c-muted" data-astro-cid-lq7i5isa>412 checks, no failures.</span> </div> <p class="inbox__foot c-muted" data-astro-cid-lq7i5isa>
+Announcements and polls, fetched only if you switch the inbox on. Off by default.
+</p> </div> </div>  <span class="c-muted topbar__greeting" data-greeting data-astro-cid-lq7i5isa>Good evening</span> <nav class="topbar__pages" aria-label="Boards" data-astro-cid-lq7i5isa> <button type="button" class="c-btn c-btn--ghost topbar__page topbar__page--active" data-page="start" aria-pressed="true" data-astro-cid-lq7i5isa>Start</button><button type="button" class="c-btn c-btn--ghost topbar__page" data-page="work" aria-pressed="false" data-astro-cid-lq7i5isa>Work</button><button type="button" class="c-btn c-btn--ghost topbar__page" data-page="focus" aria-pressed="false" data-astro-cid-lq7i5isa>Focus</button> </nav> <div class="topbar__actions" data-astro-cid-lq7i5isa>  <span class="c-btn c-btn--ghost" aria-hidden="true" data-astro-cid-lq7i5isa>◎</span> <span class="c-btn c-btn--ghost" aria-hidden="true" data-astro-cid-lq7i5isa>⊞</span> <span class="c-btn c-btn--ghost" aria-hidden="true" data-astro-cid-lq7i5isa>⚙</span> </div> </header>  <script type="module">const a=document.querySelector(".topbar");if(a){const r=a.querySelector("[data-greeting]");if(r){const e=new Date().getHours();r.textContent=e<11?"Good morning":e<18?"Good afternoon":"Good evening"}const s=a.querySelector("[data-inbox]"),n=a.querySelector("[data-inbox-panel]");if(s&&n){const e=t=>{n.hidden=!t,s.setAttribute("aria-expanded",String(t))};s.addEventListener("click",t=>{t.stopPropagation(),e(n.hidden)}),document.addEventListener("click",t=>{!n.hidden&&!n.contains(t.target)&&e(!1)}),document.addEventListener("keydown",t=>{t.key==="Escape"&&!n.hidden&&(e(!1),s.focus())})}const i=[...a.querySelectorAll("[data-page]")],c=[...document.querySelectorAll("[data-pages]")];for(const e of i)e.addEventListener("click",()=>{const t=e.dataset.page??"";for(const o of i){const d=o===e;o.classList.toggle("topbar__page--active",d),o.setAttribute("aria-pressed",String(d))}for(const o of c){const d=(o.dataset.pages??"").split(" ").includes(t);o.hidden=!d}})}</script> <div class="canvas " data-astro-cid-t7f5cdi3> <div class="canvas-grid" data-astro-cid-t7f5cdi3>  <div class="c-card widget-frame " style="--w:7;--h:3" data-widget data-pages="start" data-astro-cid-bli4p4v3>  <div class="widget-body" data-astro-cid-bli4p4v3> <div class="wgt" data-astro-cid-j7pv25f6> <h1 class="lede" data-astro-cid-j7pv25f6>Everything in one place.<br data-astro-cid-j7pv25f6>Arranged the way you want it.</h1> <p class="c-muted lede__sub" data-astro-cid-j7pv25f6>
+A local-first dashboard for macOS, Windows and Linux. Close to 50 tools as
+            widgets on your own board — and this page is one of those boards.
+</p> </div> </div>  </div>  <div class="c-card widget-frame " style="--w:5;--h:3;--accent:var(--palette-accent-6)" data-widget data-pages="start" data-astro-cid-bli4p4v3>  <div class="widget-body" data-astro-cid-bli4p4v3> <div class="wgt" data-astro-cid-j7pv25f6> <div class="wgt__head" data-astro-cid-j7pv25f6> <span class="c-badge c-badge--green" data-astro-cid-j7pv25f6>● Local</span> <span class="meta grow" data-astro-cid-j7pv25f6>44 of 46 tools</span> </div> <div class="wgt__body" data-astro-cid-j7pv25f6> <p class="c-muted small" data-astro-cid-j7pv25f6>
+Every tool carries a privacy light. Green means it works fully offline.
+              Only two are yellow — and both name the host they talk to.
+</p> <div class="row mt" data-astro-cid-j7pv25f6><span class="c-badge c-badge--yellow" data-astro-cid-j7pv25f6>● Internet</span> <span class="meta grow" data-astro-cid-j7pv25f6>Weather · open-meteo.com</span></div> <div class="row" data-astro-cid-j7pv25f6><span class="c-badge c-badge--yellow" data-astro-cid-j7pv25f6>● Internet</span> <span class="meta grow" data-astro-cid-j7pv25f6>Assistant · huggingface.co</span></div> </div> </div> </div>  </div>  <div class="c-card widget-frame " style="--w:5;--h:6" id="assistant" data-widget data-pages="start focus" data-astro-cid-bli4p4v3>  <div class="widget-body" data-astro-cid-bli4p4v3> <div class="aw-root" data-assistant data-scripts="[{&#34;prompt&#34;:&#34;Tax return by Friday, dentist on the 12th, and I should drink more water&#34;,&#34;reply&#34;:&#34;Three things spotted. The proposals are below — none of them has happened yet.&#34;,&#34;proposals&#34;:[{&#34;kind&#34;:&#34;To-do&#34;,&#34;summary&#34;:&#34;Add task “Tax return 2025” for Friday&#34;},{&#34;kind&#34;:&#34;Appointment&#34;,&#34;summary&#34;:&#34;Dentist on the 12th at 09:00 into the calendar&#34;},{&#34;kind&#34;:&#34;Habit&#34;,&#34;summary&#34;:&#34;Add daily habit “2 l of water”&#34;}]},{&#34;prompt&#34;:&#34;Summarise what is still open this week&#34;,&#34;reply&#34;:&#34;Four open tasks, two of them overdue. The rest is on track.&#34;,&#34;proposals&#34;:[{&#34;kind&#34;:&#34;Note&#34;,&#34;summary&#34;:&#34;Save the week’s overview as note “W31”&#34;}]},{&#34;prompt&#34;:&#34;Make me flashcards for § 823 BGB&#34;,&#34;reply&#34;:&#34;Found the section in your dictionary and built four cards from it.&#34;,&#34;proposals&#34;:[{&#34;kind&#34;:&#34;Flashcards&#34;,&#34;summary&#34;:&#34;Add 4 cards to the deck “Tort law”&#34;}]}]"> <div class="aw-scroll" data-aw-feed aria-live="polite"> <div class="aw-msg-row"> <div class="aw-msg aw-msg--user">Tax return by Friday, dentist on the 12th, and I should drink more water</div> </div> <div class="aw-turn"> <div class="aw-card c-card"> <div class="aw-speaker"> <span class="aw-avatar aw-avatar--sm" aria-hidden="true">◐</span> <span class="aw-speaker__name">Ada replies</span> </div> <p class="aw-reply">Three things spotted. The proposals are below — none of them has happened yet.</p> </div> </div> <div class="aw-card c-card" data-proposal> <div class="aw-speaker"> <span class="c-badge">To-do</span> </div> <p class="aw-card__summary">Add task “Tax return 2025” for Friday</p> <div class="aw-card__actions"> <button type="button" class="c-btn c-btn--primary" data-accept>Yes</button> <button type="button" class="c-btn" data-edit>Edit</button> <button type="button" class="c-btn c-btn--ghost" data-decline>No</button> </div> </div><div class="aw-card c-card" data-proposal> <div class="aw-speaker"> <span class="c-badge">Appointment</span> </div> <p class="aw-card__summary">Dentist on the 12th at 09:00 into the calendar</p> <div class="aw-card__actions"> <button type="button" class="c-btn c-btn--primary" data-accept>Yes</button> <button type="button" class="c-btn" data-edit>Edit</button> <button type="button" class="c-btn c-btn--ghost" data-decline>No</button> </div> </div><div class="aw-card c-card" data-proposal> <div class="aw-speaker"> <span class="c-badge">Habit</span> </div> <p class="aw-card__summary">Add daily habit “2 l of water”</p> <div class="aw-card__actions"> <button type="button" class="c-btn c-btn--primary" data-accept>Yes</button> <button type="button" class="c-btn" data-edit>Edit</button> <button type="button" class="c-btn c-btn--ghost" data-decline>No</button> </div> </div> </div> <div class="aw-suggest"> <p class="aw-suggest__label">Try a braindump:</p> <div class="aw-suggest__row"> <button type="button" class="c-btn aw-suggest__btn" data-script="0"> Tax return by Friday, dentist on the 12th, and… </button><button type="button" class="c-btn aw-suggest__btn" data-script="1"> Summarise what is still open this week </button><button type="button" class="c-btn aw-suggest__btn" data-script="2"> Make me flashcards for § 823 BGB </button> </div> </div> </div> </div>  </div>   <script type="module">const c=document.querySelector("[data-assistant]");if(c){const a=c.querySelector("[data-aw-feed]"),i=JSON.parse(c.dataset.scripts??"[]"),p=window.matchMedia("(prefers-reduced-motion: reduce)").matches,o=(e,t)=>{e.querySelector(".aw-card__actions")?.remove();const s=document.createElement("p");s.className=`aw-card__status${t?" aw-card__status--ok":""}`,s.textContent=t?"✓ Done":"Declined",e.append(s)},d=e=>{e.querySelector("[data-accept]")?.addEventListener("click",()=>o(e,!0)),e.querySelector("[data-decline]")?.addEventListener("click",()=>o(e,!1)),e.querySelector("[data-edit]")?.addEventListener("click",()=>{const t=e.querySelector(".aw-card__summary");t&&(t.textContent=`${t.textContent} — in the real Cardo a form opens here.`)})};c.querySelectorAll("[data-proposal]").forEach(d);const u=e=>{if(!a)return;a.replaceChildren();const t=document.createElement("div");t.className="aw-msg-row",t.innerHTML='<div class="aw-msg aw-msg--user"></div>',t.querySelector(".aw-msg").textContent=e.prompt,a.append(t);const s=document.createElement("div");s.className="aw-status",s.innerHTML='<span class="aw-spinner"></span><span class="c-muted">thinking…</span>',a.append(s),window.setTimeout(()=>{s.remove();const r=document.createElement("div");r.className="aw-turn",r.innerHTML='<div class="aw-card c-card"><div class="aw-speaker"><span class="aw-avatar aw-avatar--sm" aria-hidden="true">◐</span><span class="aw-speaker__name">Ada replies</span></div><p class="aw-reply"></p></div>',r.querySelector(".aw-reply").textContent=e.reply,a.append(r);for(const l of e.proposals){const n=document.createElement("div");n.className="aw-card c-card",n.dataset.proposal="",n.innerHTML='<div class="aw-speaker"><span class="c-badge"></span></div><p class="aw-card__summary"></p><div class="aw-card__actions"><button type="button" class="c-btn c-btn--primary" data-accept>Yes</button><button type="button" class="c-btn" data-edit>Edit</button><button type="button" class="c-btn c-btn--ghost" data-decline>No</button></div>',n.querySelector(".c-badge").textContent=l.kind,n.querySelector(".aw-card__summary").textContent=l.summary,a.append(n),d(n)}a.scrollTop=a.scrollHeight},p?0:700)};c.querySelectorAll("[data-script]").forEach(e=>{e.addEventListener("click",()=>{const t=i[Number(e.dataset.script)];t&&u(t)})})}</script> <div class="c-card widget-frame " style="--w:4;--h:3" data-widget data-pages="start work" data-astro-cid-bli4p4v3>  <div class="widget-body" data-astro-cid-bli4p4v3> <div class="wgt" data-astro-cid-j7pv25f6> <div class="wgt__head" data-astro-cid-j7pv25f6><strong data-astro-cid-j7pv25f6>Today</strong><span class="meta grow" data-astro-cid-j7pv25f6>2/5</span></div> <div class="wgt__body" data-astro-cid-j7pv25f6> <label class="row" data-astro-cid-j7pv25f6><input type="checkbox" checked data-astro-cid-j7pv25f6><span class="grow done" data-astro-cid-j7pv25f6>Draft the contract</span></label> <label class="row" data-astro-cid-j7pv25f6><input type="checkbox" checked data-astro-cid-j7pv25f6><span class="grow done" data-astro-cid-j7pv25f6>Review 24 cards</span></label> <label class="row" data-astro-cid-j7pv25f6><input type="checkbox" data-astro-cid-j7pv25f6><span class="grow" data-astro-cid-j7pv25f6>Call the tax office</span><span class="meta" data-astro-cid-j7pv25f6>30.07.</span></label> <label class="row" data-astro-cid-j7pv25f6><input type="checkbox" data-astro-cid-j7pv25f6><span class="grow" data-astro-cid-j7pv25f6>Tax return 2025</span><span class="meta overdue" data-astro-cid-j7pv25f6>28.07.</span></label> <label class="row" data-astro-cid-j7pv25f6><input type="checkbox" data-astro-cid-j7pv25f6><span class="grow" data-astro-cid-j7pv25f6>Sort the notes folder</span></label> </div> </div> </div>  </div>  <div class="c-card widget-frame " style="--w:3;--h:3;--accent:var(--palette-accent-3)" data-widget data-pages="start work focus" data-astro-cid-bli4p4v3>  <div class="widget-body" data-astro-cid-bli4p4v3> <div class="wgt clock" data-astro-cid-j7pv25f6> <div class="num clock__time" data-clock data-astro-cid-j7pv25f6>09:41</div> <div class="c-muted small" data-date data-astro-cid-j7pv25f6>Wednesday</div> </div> </div>  </div>   <div class="c-card widget-frame " style="--w:5;--h:3;--accent:var(--palette-accent-4)" data-widget data-pages="work" data-astro-cid-bli4p4v3>  <div class="widget-body" data-astro-cid-bli4p4v3> <div class="wgt" data-astro-cid-j7pv25f6> <div class="wgt__head" data-astro-cid-j7pv25f6><strong data-astro-cid-j7pv25f6>Projects</strong><span class="meta grow" data-astro-cid-j7pv25f6>3 active</span></div> <div class="wgt__body" data-astro-cid-j7pv25f6> <div class="row" data-astro-cid-j7pv25f6><span class="grow" data-astro-cid-j7pv25f6>Client migration</span><span class="meta" data-astro-cid-j7pv25f6>72 %</span></div> <div class="bar" data-astro-cid-j7pv25f6><span style="width:72%;background:var(--accent-4)" data-astro-cid-j7pv25f6></span></div> <div class="row mt" data-astro-cid-j7pv25f6><span class="grow" data-astro-cid-j7pv25f6>Q3 report</span><span class="meta" data-astro-cid-j7pv25f6>40 %</span></div> <div class="bar" data-astro-cid-j7pv25f6><span style="width:40%;background:var(--accent-2)" data-astro-cid-j7pv25f6></span></div> </div> </div> </div>  </div>  <div class="c-card widget-frame " style="--w:4;--h:3;--accent:var(--palette-accent-2)" data-widget data-pages="work" data-astro-cid-bli4p4v3>  <div class="widget-body" data-astro-cid-bli4p4v3> <div class="wgt" data-astro-cid-j7pv25f6> <div class="wgt__head" data-astro-cid-j7pv25f6><strong data-astro-cid-j7pv25f6>Notes</strong><span class="meta grow" data-astro-cid-j7pv25f6>12 files</span></div> <div class="wgt__body" data-astro-cid-j7pv25f6> <div class="row" data-astro-cid-j7pv25f6><span class="grow" data-astro-cid-j7pv25f6>Client migration — plan</span><span class="meta" data-astro-cid-j7pv25f6>2 h</span></div> <div class="row" data-astro-cid-j7pv25f6><span class="grow" data-astro-cid-j7pv25f6>Meeting 28.07.</span><span class="meta" data-astro-cid-j7pv25f6>1 d</span></div> <div class="row" data-astro-cid-j7pv25f6><span class="grow" data-astro-cid-j7pv25f6>[[Q3 report]]</span><span class="meta" data-astro-cid-j7pv25f6>3 d</span></div> <p class="c-muted small" style="margin-top:var(--space-2)" data-astro-cid-j7pv25f6>
+Plain Markdown in a folder you own — wiki-links, backlinks, LaTeX.
+</p> </div> </div> </div>  </div>   <div class="c-card widget-frame " style="--w:5;--h:3;--accent:var(--palette-accent-2)" data-widget data-pages="focus" data-astro-cid-bli4p4v3>  <div class="widget-body" data-astro-cid-bli4p4v3> <div class="wgt clock" data-astro-cid-j7pv25f6> <div class="num clock__time" style="color:var(--accent-2)" data-astro-cid-j7pv25f6>24:18</div> <div class="c-muted small" data-astro-cid-j7pv25f6>Pomodoro · 2 of 4</div> <div class="bar" style="width:100%;margin-top:var(--space-2)" data-astro-cid-j7pv25f6> <span style="width:34%;background:var(--accent-2)" data-astro-cid-j7pv25f6></span> </div> </div> </div>  </div>  <div class="c-card widget-frame " style="--w:4;--h:3;--accent:var(--palette-accent-6)" data-widget data-pages="focus" data-astro-cid-bli4p4v3>  <div class="widget-body" data-astro-cid-bli4p4v3> <div class="wgt" data-astro-cid-j7pv25f6> <div class="wgt__head" data-astro-cid-j7pv25f6><strong data-astro-cid-j7pv25f6>Habits</strong><span class="meta grow" data-astro-cid-j7pv25f6>4/6</span></div> <div class="wgt__body" data-astro-cid-j7pv25f6> <div class="heat" data-astro-cid-j7pv25f6> <span class="heat__cell heat__cell--on" data-astro-cid-j7pv25f6></span><span class="heat__cell heat__cell--on" data-astro-cid-j7pv25f6></span><span class="heat__cell heat__cell--on" data-astro-cid-j7pv25f6></span><span class="heat__cell" data-astro-cid-j7pv25f6></span><span class="heat__cell heat__cell--on" data-astro-cid-j7pv25f6></span><span class="heat__cell heat__cell--on" data-astro-cid-j7pv25f6></span><span class="heat__cell heat__cell--on" data-astro-cid-j7pv25f6></span><span class="heat__cell heat__cell--on" data-astro-cid-j7pv25f6></span><span class="heat__cell" data-astro-cid-j7pv25f6></span><span class="heat__cell heat__cell--on" data-astro-cid-j7pv25f6></span><span class="heat__cell heat__cell--on" data-astro-cid-j7pv25f6></span><span class="heat__cell heat__cell--on" data-astro-cid-j7pv25f6></span><span class="heat__cell heat__cell--on" data-astro-cid-j7pv25f6></span><span class="heat__cell" data-astro-cid-j7pv25f6></span><span class="heat__cell heat__cell--on" data-astro-cid-j7pv25f6></span><span class="heat__cell heat__cell--on" data-astro-cid-j7pv25f6></span><span class="heat__cell heat__cell--on" data-astro-cid-j7pv25f6></span><span class="heat__cell heat__cell--on" data-astro-cid-j7pv25f6></span><span class="heat__cell" data-astro-cid-j7pv25f6></span><span class="heat__cell heat__cell--on" data-astro-cid-j7pv25f6></span><span class="heat__cell heat__cell--on" data-astro-cid-j7pv25f6></span><span class="heat__cell heat__cell--on" data-astro-cid-j7pv25f6></span><span class="heat__cell heat__cell--on" data-astro-cid-j7pv25f6></span><span class="heat__cell" data-astro-cid-j7pv25f6></span><span class="heat__cell heat__cell--on" data-astro-cid-j7pv25f6></span><span class="heat__cell heat__cell--on" data-astro-cid-j7pv25f6></span><span class="heat__cell heat__cell--on" data-astro-cid-j7pv25f6></span><span class="heat__cell heat__cell--on" data-astro-cid-j7pv25f6></span> </div> </div> </div> </div>  </div>   </div> </div>  </section> <p class="board-note c-muted" data-astro-cid-j7pv25f6>
+That is not a picture. Operate the assistant, change the design — the page behaves
+    like the app because it is built from the same pieces.
+</p>   <section class="topic topic--wide" id="assistant-detail" data-astro-cid-j7pv25f6> <div class="topic__text" data-astro-cid-j7pv25f6> <p class="eyebrow" data-astro-cid-j7pv25f6>Assistant</p> <h2 data-astro-cid-j7pv25f6>It proposes. You decide.</h2> <p class="prose" data-astro-cid-j7pv25f6>
+Dump your thoughts in and get back proposal cards — appointments, to-dos, notes,
+        habits. <strong data-astro-cid-j7pv25f6>Nothing is applied until you say yes.</strong> The model runs on
+        your device; or bring your own Claude subscription if you want cloud power.
+</p> <p class="prose" data-astro-cid-j7pv25f6>
+Give an assistant a personality, working style and memory. Run several of them,
+        put them in a team, let them delegate to each other.
+</p> <details class="disc" data-astro-cid-j7pv25f6> <summary data-astro-cid-j7pv25f6>Which model should I pick?</summary> <div class="disc__body" data-astro-cid-j7pv25f6> <p data-astro-cid-j7pv25f6>Roughly: more RAM buys a bigger model, and a bigger model understands more but
+            answers slower. Cardo shows what fits your machine before you download anything.</p> <ul data-astro-cid-j7pv25f6> <li data-astro-cid-j7pv25f6><strong data-astro-cid-j7pv25f6>8 GB RAM</strong> — a 3–4 B model, quick and fine for braindumps.</li> <li data-astro-cid-j7pv25f6><strong data-astro-cid-j7pv25f6>16 GB</strong> — 7–8 B, noticeably better at German and at longer texts.</li> <li data-astro-cid-j7pv25f6><strong data-astro-cid-j7pv25f6>32 GB and up</strong> — 12–14 B, or use Claude and keep the RAM.</li> </ul> <p data-astro-cid-j7pv25f6>Apple Silicon is markedly faster than an equivalent Intel machine, because the
+            model shares memory with the GPU.</p> </div> </details> <details class="disc" data-astro-cid-j7pv25f6> <summary data-astro-cid-j7pv25f6>Is anything sent to a server?</summary> <div class="disc__body" data-astro-cid-j7pv25f6> <p data-astro-cid-j7pv25f6>With a local model: no. The only network access is the one-time model download
+            from <code data-astro-cid-j7pv25f6>huggingface.co</code>, and it only happens when you press install.</p> <p data-astro-cid-j7pv25f6>With Claude: yes — your prompt goes to Anthropic through the Claude Code CLI you
+            installed and logged into yourself. Cardo marks that clearly, and it is never
+            the default.</p> </div> </details> <details class="disc" data-astro-cid-j7pv25f6> <summary data-astro-cid-j7pv25f6>Teams and delegation</summary> <div class="disc__body" data-astro-cid-j7pv25f6> <p data-astro-cid-j7pv25f6>Several assistants can share a chat. A router decides who answers, and one can
+            hand a question to another that knows the subject better. Each keeps its own
+            memory and competences.</p> </div> </details> <p class="prose" data-astro-cid-j7pv25f6> <a href="#assistant" data-astro-cid-j7pv25f6>Try it on the board above ↑</a> </p> </div> </section>  <section class="topic topic--wide" id="tools" data-astro-cid-j7pv25f6> <div class="topic__text" data-astro-cid-j7pv25f6> <p class="eyebrow" data-astro-cid-j7pv25f6>Tools</p> <h2 data-astro-cid-j7pv25f6>Close to 50 tools, and each one declares itself.</h2> <p class="prose" data-astro-cid-j7pv25f6>
+Green means the tool works fully offline. Yellow means it contacts the internet —
+        and Cardo says in plain language what it sends and where, before anything happens.
+        There is no third state and no fine print.
+</p> </div> <ul class="tools" data-astro-cid-j7pv25f6> <li class="tools__item" data-astro-cid-j7pv25f6><span class="tools__dot" aria-hidden="true" data-astro-cid-j7pv25f6></span>To-dos</li><li class="tools__item" data-astro-cid-j7pv25f6><span class="tools__dot" aria-hidden="true" data-astro-cid-j7pv25f6></span>Notes</li><li class="tools__item" data-astro-cid-j7pv25f6><span class="tools__dot" aria-hidden="true" data-astro-cid-j7pv25f6></span>Calendar</li><li class="tools__item" data-astro-cid-j7pv25f6><span class="tools__dot" aria-hidden="true" data-astro-cid-j7pv25f6></span>Files</li><li class="tools__item" data-astro-cid-j7pv25f6><span class="tools__dot" aria-hidden="true" data-astro-cid-j7pv25f6></span>Flashcards</li><li class="tools__item" data-astro-cid-j7pv25f6><span class="tools__dot" aria-hidden="true" data-astro-cid-j7pv25f6></span>Statutes</li><li class="tools__item" data-astro-cid-j7pv25f6><span class="tools__dot" aria-hidden="true" data-astro-cid-j7pv25f6></span>Habits</li><li class="tools__item" data-astro-cid-j7pv25f6><span class="tools__dot" aria-hidden="true" data-astro-cid-j7pv25f6></span>Clock</li><li class="tools__item" data-astro-cid-j7pv25f6><span class="tools__dot" aria-hidden="true" data-astro-cid-j7pv25f6></span>World clock</li><li class="tools__item" data-astro-cid-j7pv25f6><span class="tools__dot" aria-hidden="true" data-astro-cid-j7pv25f6></span>Pomodoro</li><li class="tools__item" data-astro-cid-j7pv25f6><span class="tools__dot" aria-hidden="true" data-astro-cid-j7pv25f6></span>Countdown</li><li class="tools__item" data-astro-cid-j7pv25f6><span class="tools__dot" aria-hidden="true" data-astro-cid-j7pv25f6></span>Alarm</li><li class="tools__item" data-astro-cid-j7pv25f6><span class="tools__dot" aria-hidden="true" data-astro-cid-j7pv25f6></span>Weather</li><li class="tools__item" data-astro-cid-j7pv25f6><span class="tools__dot" aria-hidden="true" data-astro-cid-j7pv25f6></span>Stats</li><li class="tools__item" data-astro-cid-j7pv25f6><span class="tools__dot" aria-hidden="true" data-astro-cid-j7pv25f6></span>Eisenhower</li><li class="tools__item" data-astro-cid-j7pv25f6><span class="tools__dot" aria-hidden="true" data-astro-cid-j7pv25f6></span>Time blocking</li><li class="tools__item" data-astro-cid-j7pv25f6><span class="tools__dot" aria-hidden="true" data-astro-cid-j7pv25f6></span>Projects</li><li class="tools__item" data-astro-cid-j7pv25f6><span class="tools__dot" aria-hidden="true" data-astro-cid-j7pv25f6></span>OKRs</li><li class="tools__item" data-astro-cid-j7pv25f6><span class="tools__dot" aria-hidden="true" data-astro-cid-j7pv25f6></span>Scratchpad</li><li class="tools__item" data-astro-cid-j7pv25f6><span class="tools__dot" aria-hidden="true" data-astro-cid-j7pv25f6></span>Sticky notes</li><li class="tools__item" data-astro-cid-j7pv25f6><span class="tools__dot" aria-hidden="true" data-astro-cid-j7pv25f6></span>Decision log</li><li class="tools__item" data-astro-cid-j7pv25f6><span class="tools__dot" aria-hidden="true" data-astro-cid-j7pv25f6></span>Reading list</li><li class="tools__item" data-astro-cid-j7pv25f6><span class="tools__dot" aria-hidden="true" data-astro-cid-j7pv25f6></span>Bookmarks</li><li class="tools__item" data-astro-cid-j7pv25f6><span class="tools__dot" aria-hidden="true" data-astro-cid-j7pv25f6></span>Snippets</li><li class="tools__item" data-astro-cid-j7pv25f6><span class="tools__dot" aria-hidden="true" data-astro-cid-j7pv25f6></span>Soundscapes</li><li class="tools__item" data-astro-cid-j7pv25f6><span class="tools__dot" aria-hidden="true" data-astro-cid-j7pv25f6></span>Breathing</li><li class="tools__item" data-astro-cid-j7pv25f6><span class="tools__dot" aria-hidden="true" data-astro-cid-j7pv25f6></span>Mood</li><li class="tools__item" data-astro-cid-j7pv25f6><span class="tools__dot" aria-hidden="true" data-astro-cid-j7pv25f6></span>Sleep log</li><li class="tools__item" data-astro-cid-j7pv25f6><span class="tools__dot" aria-hidden="true" data-astro-cid-j7pv25f6></span>Workout</li><li class="tools__item" data-astro-cid-j7pv25f6><span class="tools__dot" aria-hidden="true" data-astro-cid-j7pv25f6></span>Meal planner</li><li class="tools__item" data-astro-cid-j7pv25f6><span class="tools__dot" aria-hidden="true" data-astro-cid-j7pv25f6></span>Medication</li><li class="tools__item" data-astro-cid-j7pv25f6><span class="tools__dot" aria-hidden="true" data-astro-cid-j7pv25f6></span>Savings jar</li><li class="tools__item" data-astro-cid-j7pv25f6><span class="tools__dot" aria-hidden="true" data-astro-cid-j7pv25f6></span>Subscriptions</li><li class="tools__item" data-astro-cid-j7pv25f6><span class="tools__dot" aria-hidden="true" data-astro-cid-j7pv25f6></span>Shared expenses</li><li class="tools__item" data-astro-cid-j7pv25f6><span class="tools__dot" aria-hidden="true" data-astro-cid-j7pv25f6></span>Currency</li><li class="tools__item" data-astro-cid-j7pv25f6><span class="tools__dot" aria-hidden="true" data-astro-cid-j7pv25f6></span>Calculator</li><li class="tools__item" data-astro-cid-j7pv25f6><span class="tools__dot" aria-hidden="true" data-astro-cid-j7pv25f6></span>Unit converter</li><li class="tools__item" data-astro-cid-j7pv25f6><span class="tools__dot" aria-hidden="true" data-astro-cid-j7pv25f6></span>QR codes</li><li class="tools__item" data-astro-cid-j7pv25f6><span class="tools__dot" aria-hidden="true" data-astro-cid-j7pv25f6></span>Password generator</li><li class="tools__item" data-astro-cid-j7pv25f6><span class="tools__dot" aria-hidden="true" data-astro-cid-j7pv25f6></span>Random picker</li><li class="tools__item" data-astro-cid-j7pv25f6><span class="tools__dot" aria-hidden="true" data-astro-cid-j7pv25f6></span>Colours</li><li class="tools__item" data-astro-cid-j7pv25f6><span class="tools__dot" aria-hidden="true" data-astro-cid-j7pv25f6></span>RSS</li><li class="tools__item" data-astro-cid-j7pv25f6><span class="tools__dot" aria-hidden="true" data-astro-cid-j7pv25f6></span>Counter</li><li class="tools__item" data-astro-cid-j7pv25f6><span class="tools__dot" aria-hidden="true" data-astro-cid-j7pv25f6></span>Hydration</li><li class="tools__item" data-astro-cid-j7pv25f6><span class="tools__dot" aria-hidden="true" data-astro-cid-j7pv25f6></span>Routine</li><li class="tools__item" data-astro-cid-j7pv25f6><span class="tools__dot" aria-hidden="true" data-astro-cid-j7pv25f6></span>Quick capture</li> </ul> </section>  <section class="topic topic--flip" id="flashcards-detail" data-astro-cid-j7pv25f6> <div class="topic__text" data-astro-cid-j7pv25f6> <p class="eyebrow" data-astro-cid-j7pv25f6>Flashcards</p> <h2 data-astro-cid-j7pv25f6>Anki-class, without leaving your board.</h2> <p class="prose" data-astro-cid-j7pv25f6>
+Note types with templates and cloze deletions, the modern FSRS scheduler or classic
+        SM-2, a card browser with Anki search syntax, statistics — and import or export of
+        your existing <code data-astro-cid-j7pv25f6>.apkg</code> decks. Media and LaTeX included. All fully local.
+</p> <p class="prose" data-astro-cid-j7pv25f6>Grade the card next to this and watch the interval change.</p> </div> <div class="topic__demo" data-astro-cid-j7pv25f6><div class="canvas " data-astro-cid-t7f5cdi3> <div class="canvas-grid" data-astro-cid-t7f5cdi3> <div class="c-card widget-frame " style="--w:5;--h:5" id="flashcards" data-widget data-astro-cid-bli4p4v3>  <div class="widget-body" data-astro-cid-bli4p4v3> <div class="fc" data-flashcards data-cards="[{&#34;front&#34;:&#34;§ 823 (1) BGB — protected interests?&#34;,&#34;back&#34;:&#34;Life, body, health, freedom, property, other rights&#34;},{&#34;front&#34;:&#34;What is a cloze deletion?&#34;,&#34;back&#34;:&#34;A gap text: {{c1::a passage}} is hidden while studying&#34;},{&#34;front&#34;:&#34;FSRS versus SM-2?&#34;,&#34;back&#34;:&#34;Models memory stability instead of fixed factors — fewer reviews at the same retention&#34;}]" data-astro-cid-bkbnpyaw> <header class="fc__bar" data-astro-cid-bkbnpyaw> <span style="color:var(--accent)" data-astro-cid-bkbnpyaw>● <span data-count-new data-astro-cid-bkbnpyaw>12</span></span> <span style="color:var(--warning)" data-astro-cid-bkbnpyaw>● <span data-count-learn data-astro-cid-bkbnpyaw>4</span></span> <span style="color:var(--success)" data-astro-cid-bkbnpyaw>● <span data-count-review data-astro-cid-bkbnpyaw>31</span></span> <span class="c-muted fc__timer" data-astro-cid-bkbnpyaw>01:24</span> </header> <div class="fc__card" data-face aria-live="polite" data-astro-cid-bkbnpyaw> <p class="fc__front" data-front data-astro-cid-bkbnpyaw>§ 823 (1) BGB — protected interests?</p> <p class="fc__back" data-back hidden data-astro-cid-bkbnpyaw>Life, body, health, freedom, property, other rights</p> </div> <button type="button" class="c-btn c-btn--primary fc__show" data-show data-astro-cid-bkbnpyaw>Show answer</button> <div class="fc__grades" data-grades hidden data-astro-cid-bkbnpyaw> <button type="button" class="c-btn fc__grade fc__grade--again" data-grade="Again · in 1 min" data-astro-cid-bkbnpyaw>Again</button> <button type="button" class="c-btn fc__grade fc__grade--hard" data-grade="Hard · in 6 min" data-astro-cid-bkbnpyaw>Hard</button> <button type="button" class="c-btn fc__grade fc__grade--good" data-grade="Good · in 3 days" data-astro-cid-bkbnpyaw>Good</button> <button type="button" class="c-btn fc__grade fc__grade--easy" data-grade="Easy · in 8 days" data-astro-cid-bkbnpyaw>Easy</button> </div> <p class="c-muted fc__hint" data-hint data-astro-cid-bkbnpyaw>The scheduler picks the next date — FSRS or classic SM-2.</p> </div> </div>  </div>   <script type="module">const e=document.querySelector("[data-flashcards]");if(e){const a=JSON.parse(e.dataset.cards??"[]"),s=e.querySelector("[data-front]"),o=e.querySelector("[data-back]"),d=e.querySelector("[data-show]"),c=e.querySelector("[data-grades]"),i=e.querySelector("[data-hint]"),t={new:e.querySelector("[data-count-new]"),review:e.querySelector("[data-count-review]")};let n=0;const l=()=>{o.hidden=!1,d.hidden=!0,c.hidden=!1},u=r=>{i.textContent=`${r} — that is how the scheduler spaces it.`,t.new.textContent=String(Math.max(0,Number(t.new.textContent)-1)),t.review.textContent=String(Number(t.review.textContent)+1),n=(n+1)%a.length,s.textContent=a[n].front,o.textContent=a[n].back,o.hidden=!0,c.hidden=!0,d.hidden=!1};d.addEventListener("click",l);for(const r of c.querySelectorAll("[data-grade]"))r.addEventListener("click",()=>u(r.dataset.grade??""))}</script> </div> </div> </div> </section>  <section class="topic" id="sync-detail" data-astro-cid-j7pv25f6> <div class="topic__text" data-astro-cid-j7pv25f6> <p class="eyebrow" data-astro-cid-j7pv25f6>Sync</p> <h2 data-astro-cid-j7pv25f6>Optional. Off by default. Encrypted with a key only you hold.</h2> <p class="prose" data-astro-cid-j7pv25f6>
+Your to-dos, notes, settings and assistants on every device — carried by your own
+        Google Drive, an iCloud or Dropbox folder, or a WebDAV server. Everything is
+        encrypted on your device first, so whoever stores it holds unreadable blocks.
+</p> <p class="prose" data-astro-cid-j7pv25f6>
+Turn it on next to this and look at what the storage provider actually receives.
+</p> </div> <div class="topic__demo" data-astro-cid-j7pv25f6><div class="canvas " data-astro-cid-t7f5cdi3> <div class="canvas-grid" data-astro-cid-t7f5cdi3> <div class="c-card widget-frame " style="--w:6;--h:4" id="sync" data-widget data-astro-cid-bli4p4v3>  <div class="widget-body" data-astro-cid-bli4p4v3> <div class="sy" data-sync data-astro-cid-wtbl3yle> <div class="wgt__head" data-astro-cid-wtbl3yle> <label class="row sy__toggle" data-astro-cid-wtbl3yle> <input type="checkbox" data-sync-toggle data-astro-cid-wtbl3yle> <span class="grow" data-astro-cid-wtbl3yle>Turn sync on</span> </label> <span class="c-badge" data-state data-astro-cid-wtbl3yle>Off</span> </div> <div class="sy__cols" data-astro-cid-wtbl3yle> <div class="sy__col" data-astro-cid-wtbl3yle> <p class="sy__label" data-astro-cid-wtbl3yle>On your device</p> <div class="sy__box" data-astro-cid-wtbl3yle> <p class="sy__note" data-astro-cid-wtbl3yle>Dentist on the 12th at 9. Bring the insurance card.</p> </div> </div> <div class="sy__arrow" aria-hidden="true" data-astro-cid-wtbl3yle>→</div> <div class="sy__col" data-astro-cid-wtbl3yle> <p class="sy__label" data-astro-cid-wtbl3yle>What your storage sees</p> <div class="sy__box" data-astro-cid-wtbl3yle> <p class="sy__cipher" data-cipher data-astro-cid-wtbl3yle>— nothing yet —</p> </div> </div> </div> <div class="sy__key" data-keyrow hidden data-astro-cid-wtbl3yle> <span class="meta" data-astro-cid-wtbl3yle>Your key</span> <code class="sy__code" data-key data-astro-cid-wtbl3yle>CRD1-••••-••••-••••-••••</code> <button type="button" class="c-btn sy__reveal" data-reveal-key data-astro-cid-wtbl3yle>Show</button> </div> <p class="c-muted sy__note-foot" data-foot data-astro-cid-wtbl3yle>
+Optional und standardmäßig aus. Der Schlüssel entsteht auf deinem Gerät —
+      wir haben ihn nie.
+</p> </div> </div>  </div>   <script type="module">const e=document.querySelector("[data-sync]");if(e){const o=e.querySelector("[data-sync-toggle]"),n=e.querySelector("[data-state]"),d=e.querySelector("[data-cipher]"),s=e.querySelector("[data-keyrow]"),c=e.querySelector("[data-key]"),y=e.querySelector("[data-foot]"),i="q7Vd2mKpX9tLbA4zRfN0eHsWjYcU8gTnEoIuPa6ZhMxQvB3rDkS1yFwCJlG5OnWpXtQeR8mZbKvA2sYfL0dHcNjU9gTiEoPuIa7ZhMxRvB4rDkS2yFwCJlG6Ok",l="CRD1-7QF3-M2XK-9DLA-4PVN-8SZT",r=()=>{const t=o.checked;n.textContent=t?"Active":"Off",n.className=t?"c-badge c-badge--green":"c-badge",d.textContent=t?i:"— nothing yet —",s.hidden=!t,y.textContent=t?"Same note, three devices — and the provider holds only the block on the right. Without your key it is worthless.":"Optional and off by default. The key is generated on your device — we never see it."};o.addEventListener("change",r),e.querySelector("[data-reveal-key]")?.addEventListener("click",t=>{const h=t.currentTarget,a=c.textContent?.includes("•");c.textContent=a?l:"CRD1-••••-••••-••••-••••",h.textContent=a?"Hide":"Show"}),r()}</script> </div> </div> </div> </section>  <section class="topic topic--flip" id="diagnose-detail" data-astro-cid-j7pv25f6> <div class="topic__text" data-astro-cid-j7pv25f6> <p class="eyebrow" data-astro-cid-j7pv25f6>Diagnostics</p> <h2 data-astro-cid-j7pv25f6>The app checks itself, and shows its work.</h2> <p class="prose" data-astro-cid-j7pv25f6>
+One button runs over 400 checks — storage, sync crypto, every tool's self-test,
+        every widget in every view — against a throwaway database, then hands you a
+        readable report. If something is off you see exactly what, instead of filing a
+        support ticket.
+</p> </div> <div class="topic__demo" data-astro-cid-j7pv25f6><div class="canvas " data-astro-cid-t7f5cdi3> <div class="canvas-grid" data-astro-cid-t7f5cdi3> <div class="c-card widget-frame " style="--w:5;--h:4" id="diagnose" data-widget data-astro-cid-bli4p4v3>  <div class="widget-body" data-astro-cid-bli4p4v3> <div class="dg" data-diagnose data-groups="[{&#34;id&#34;:&#34;core&#34;,&#34;label&#34;:&#34;Core&#34;,&#34;count&#34;:12},{&#34;id&#34;:&#34;environment&#34;,&#34;label&#34;:&#34;Environment&#34;,&#34;count&#34;:10},{&#34;id&#34;:&#34;tools&#34;,&#34;label&#34;:&#34;Tools&#34;,&#34;count&#34;:261},{&#34;id&#34;:&#34;ui&#34;,&#34;label&#34;:&#34;Interface&#34;,&#34;count&#34;:121},{&#34;id&#34;:&#34;security&#34;,&#34;label&#34;:&#34;Security&#34;,&#34;count&#34;:8}]" data-astro-cid-ytlyuym2> <div class="wgt__head" data-astro-cid-ytlyuym2> <strong data-astro-cid-ytlyuym2>Self-test</strong> <span class="meta grow" data-summary data-astro-cid-ytlyuym2>412 checks ready</span> </div> <div class="dg__list" data-list aria-live="polite" data-astro-cid-ytlyuym2> <div class="dg__row" data-row="core" data-astro-cid-ytlyuym2> <span class="dg__icon" data-icon data-astro-cid-ytlyuym2>·</span> <span class="grow" data-astro-cid-ytlyuym2>Core</span> <span class="meta" data-astro-cid-ytlyuym2>12</span> </div><div class="dg__row" data-row="environment" data-astro-cid-ytlyuym2> <span class="dg__icon" data-icon data-astro-cid-ytlyuym2>·</span> <span class="grow" data-astro-cid-ytlyuym2>Environment</span> <span class="meta" data-astro-cid-ytlyuym2>10</span> </div><div class="dg__row" data-row="tools" data-astro-cid-ytlyuym2> <span class="dg__icon" data-icon data-astro-cid-ytlyuym2>·</span> <span class="grow" data-astro-cid-ytlyuym2>Tools</span> <span class="meta" data-astro-cid-ytlyuym2>261</span> </div><div class="dg__row" data-row="ui" data-astro-cid-ytlyuym2> <span class="dg__icon" data-icon data-astro-cid-ytlyuym2>·</span> <span class="grow" data-astro-cid-ytlyuym2>Interface</span> <span class="meta" data-astro-cid-ytlyuym2>121</span> </div><div class="dg__row" data-row="security" data-astro-cid-ytlyuym2> <span class="dg__icon" data-icon data-astro-cid-ytlyuym2>·</span> <span class="grow" data-astro-cid-ytlyuym2>Security</span> <span class="meta" data-astro-cid-ytlyuym2>8</span> </div> </div> <button type="button" class="c-btn c-btn--primary dg__run" data-run data-astro-cid-ytlyuym2>Run self-test</button> <p class="c-muted dg__note" data-note data-astro-cid-ytlyuym2>
+Runs fully offline against a throwaway database. Your real data is untouched.
+</p> </div> </div>  </div>   <script type="module">const o=document.querySelector("[data-diagnose]");if(o){const n=JSON.parse(o.dataset.groups??"[]"),c=o.querySelector("[data-run]"),r=o.querySelector("[data-summary]"),l=o.querySelector("[data-note]"),g=window.matchMedia("(prefers-reduced-motion: reduce)").matches,u=n.reduce((t,e)=>t+e.count,0),i=t=>o.querySelector(`[data-row="${t}"] [data-icon]`),m=()=>{for(const t of n){const e=i(t.id);e.textContent="·",e.className="dg__icon"}};c.addEventListener("click",()=>{c.disabled=!0,m();let t=0;const e=a=>{if(a>=n.length){r.textContent=`${u} checks · all passed`,l.textContent="That is a healthy run. If something fails, it says exactly what — no guesswork.",c.disabled=!1,c.textContent="Again";return}const d=n[a],s=i(d.id);s.textContent="◐",s.className="dg__icon dg__icon--run",window.setTimeout(()=>{s.textContent="✓",s.className="dg__icon dg__icon--ok",t+=d.count,r.textContent=`${t} of ${u} checked`,e(a+1)},g?0:260+d.count/3)};e(0)})}</script> </div> </div> </div> </section>  <section class="topic" id="design" data-astro-cid-j7pv25f6> <div class="topic__text" data-astro-cid-j7pv25f6> <p class="eyebrow" data-astro-cid-j7pv25f6>Design</p> <h2 data-astro-cid-j7pv25f6>Twenty themes. Try them on this page.</h2> <p class="prose" data-astro-cid-j7pv25f6>
+Themes, card styles, fonts, density and per-widget accents — Cardo adapts to how
+        you want to look at it. The picker beside this is the real set that ships with the
+        app, and it repaints this page as you click.
+</p> </div> <div class="topic__demo" data-astro-cid-j7pv25f6><div class="canvas " data-astro-cid-t7f5cdi3> <div class="canvas-grid" data-astro-cid-t7f5cdi3> <div class="c-card widget-frame " style="--w:4;--h:4" data-widget data-astro-cid-bli4p4v3>  <div class="widget-body" data-astro-cid-bli4p4v3> <div class="theme" data-theme-widget data-astro-cid-jytfdbja> <p class="theme__lead" data-astro-cid-jytfdbja> <strong data-astro-cid-jytfdbja>20 themes</strong> ship with Cardo. Pick one — this page
+      changes with it.
+</p> <div class="theme__group" data-astro-cid-jytfdbja> <p class="theme__label" data-astro-cid-jytfdbja>Dark · 13</p> <div class="theme__grid" data-astro-cid-jytfdbja> <button type="button" class="sw" data-theme-id="ayu-mirage" style="--sw-base:#242936;--sw-surface:#2a3141;--sw-accent:#ffcc66" aria-pressed="false" data-astro-cid-jytfdbja> <span class="sw__chip" aria-hidden="true" data-astro-cid-jytfdbja></span> <span class="sw__name" data-astro-cid-jytfdbja>Ayu Mirage</span> </button><button type="button" class="sw" data-theme-id="catppuccin-frappe" style="--sw-base:#303446;--sw-surface:#51576d;--sw-accent:#ca9ee6" aria-pressed="false" data-astro-cid-jytfdbja> <span class="sw__chip" aria-hidden="true" data-astro-cid-jytfdbja></span> <span class="sw__name" data-astro-cid-jytfdbja>Catppuccin Frappe</span> </button><button type="button" class="sw" data-theme-id="catppuccin-mocha" style="--sw-base:#1e1e2e;--sw-surface:#45475a;--sw-accent:#89b4fa" aria-pressed="false" data-astro-cid-jytfdbja> <span class="sw__chip" aria-hidden="true" data-astro-cid-jytfdbja></span> <span class="sw__name" data-astro-cid-jytfdbja>Catppuccin Mocha</span> </button><button type="button" class="sw" data-theme-id="dracula" style="--sw-base:#282a36;--sw-surface:#44475a;--sw-accent:#bd93f9" aria-pressed="false" data-astro-cid-jytfdbja> <span class="sw__chip" aria-hidden="true" data-astro-cid-jytfdbja></span> <span class="sw__name" data-astro-cid-jytfdbja>Dracula</span> </button><button type="button" class="sw" data-theme-id="everforest-dark" style="--sw-base:#2d353b;--sw-surface:#3d484d;--sw-accent:#a7c080" aria-pressed="false" data-astro-cid-jytfdbja> <span class="sw__chip" aria-hidden="true" data-astro-cid-jytfdbja></span> <span class="sw__name" data-astro-cid-jytfdbja>Everforest Dark</span> </button><button type="button" class="sw" data-theme-id="gruvbox-dark" style="--sw-base:#282828;--sw-surface:#504945;--sw-accent:#83a598" aria-pressed="false" data-astro-cid-jytfdbja> <span class="sw__chip" aria-hidden="true" data-astro-cid-jytfdbja></span> <span class="sw__name" data-astro-cid-jytfdbja>Gruvbox Dark</span> </button><button type="button" class="sw" data-theme-id="kanagawa-wave" style="--sw-base:#1f1f28;--sw-surface:#363646;--sw-accent:#7e9cd8" aria-pressed="false" data-astro-cid-jytfdbja> <span class="sw__chip" aria-hidden="true" data-astro-cid-jytfdbja></span> <span class="sw__name" data-astro-cid-jytfdbja>Kanagawa Wave</span> </button><button type="button" class="sw" data-theme-id="night-owl" style="--sw-base:#011627;--sw-surface:#12395b;--sw-accent:#82aaff" aria-pressed="false" data-astro-cid-jytfdbja> <span class="sw__chip" aria-hidden="true" data-astro-cid-jytfdbja></span> <span class="sw__name" data-astro-cid-jytfdbja>Night Owl</span> </button><button type="button" class="sw" data-theme-id="nord" style="--sw-base:#2e3440;--sw-surface:#434c5e;--sw-accent:#88c0d0" aria-pressed="false" data-astro-cid-jytfdbja> <span class="sw__chip" aria-hidden="true" data-astro-cid-jytfdbja></span> <span class="sw__name" data-astro-cid-jytfdbja>Nord</span> </button><button type="button" class="sw" data-theme-id="one-dark" style="--sw-base:#282c34;--sw-surface:#383e4a;--sw-accent:#61afef" aria-pressed="false" data-astro-cid-jytfdbja> <span class="sw__chip" aria-hidden="true" data-astro-cid-jytfdbja></span> <span class="sw__name" data-astro-cid-jytfdbja>One Dark</span> </button><button type="button" class="sw" data-theme-id="rose-pine" style="--sw-base:#191724;--sw-surface:#26233a;--sw-accent:#c4a7e7" aria-pressed="false" data-astro-cid-jytfdbja> <span class="sw__chip" aria-hidden="true" data-astro-cid-jytfdbja></span> <span class="sw__name" data-astro-cid-jytfdbja>Rose Pine</span> </button><button type="button" class="sw" data-theme-id="solarized-dark" style="--sw-base:#002b36;--sw-surface:#0d4552;--sw-accent:#268bd2" aria-pressed="false" data-astro-cid-jytfdbja> <span class="sw__chip" aria-hidden="true" data-astro-cid-jytfdbja></span> <span class="sw__name" data-astro-cid-jytfdbja>Solarized Dark</span> </button><button type="button" class="sw" data-theme-id="tokyo-night" style="--sw-base:#1a1b26;--sw-surface:#24283b;--sw-accent:#7aa2f7" aria-pressed="false" data-astro-cid-jytfdbja> <span class="sw__chip" aria-hidden="true" data-astro-cid-jytfdbja></span> <span class="sw__name" data-astro-cid-jytfdbja>Tokyo Night</span> </button> </div> </div> <div class="theme__group" data-astro-cid-jytfdbja> <p class="theme__label" data-astro-cid-jytfdbja>Light · 7</p> <div class="theme__grid" data-astro-cid-jytfdbja> <button type="button" class="sw" data-theme-id="ayu-light" style="--sw-base:#fcfcfc;--sw-surface:#e7e8e9;--sw-accent:#ffaa33" aria-pressed="false" data-astro-cid-jytfdbja> <span class="sw__chip" aria-hidden="true" data-astro-cid-jytfdbja></span> <span class="sw__name" data-astro-cid-jytfdbja>Ayu Light</span> </button><button type="button" class="sw" data-theme-id="catppuccin-latte" style="--sw-base:#eff1f5;--sw-surface:#ccd0da;--sw-accent:#1e66f5" aria-pressed="false" data-astro-cid-jytfdbja> <span class="sw__chip" aria-hidden="true" data-astro-cid-jytfdbja></span> <span class="sw__name" data-astro-cid-jytfdbja>Catppuccin Latte</span> </button><button type="button" class="sw" data-theme-id="flexoki-light" style="--sw-base:#fffcf0;--sw-surface:#e6e4d9;--sw-accent:#205ea6" aria-pressed="false" data-astro-cid-jytfdbja> <span class="sw__chip" aria-hidden="true" data-astro-cid-jytfdbja></span> <span class="sw__name" data-astro-cid-jytfdbja>Flexoki Light</span> </button><button type="button" class="sw" data-theme-id="github-light" style="--sw-base:#ffffff;--sw-surface:#eaeef2;--sw-accent:#0969da" aria-pressed="false" data-astro-cid-jytfdbja> <span class="sw__chip" aria-hidden="true" data-astro-cid-jytfdbja></span> <span class="sw__name" data-astro-cid-jytfdbja>Github Light</span> </button><button type="button" class="sw" data-theme-id="gruvbox-light" style="--sw-base:#fbf1c7;--sw-surface:#d5c4a1;--sw-accent:#076678" aria-pressed="false" data-astro-cid-jytfdbja> <span class="sw__chip" aria-hidden="true" data-astro-cid-jytfdbja></span> <span class="sw__name" data-astro-cid-jytfdbja>Gruvbox Light</span> </button><button type="button" class="sw" data-theme-id="rose-pine-dawn" style="--sw-base:#faf4ed;--sw-surface:#f2e9e1;--sw-accent:#907aa9" aria-pressed="false" data-astro-cid-jytfdbja> <span class="sw__chip" aria-hidden="true" data-astro-cid-jytfdbja></span> <span class="sw__name" data-astro-cid-jytfdbja>Rose Pine Dawn</span> </button><button type="button" class="sw" data-theme-id="solarized-light" style="--sw-base:#fdf6e3;--sw-surface:#ddd6c1;--sw-accent:#268bd2" aria-pressed="false" data-astro-cid-jytfdbja> <span class="sw__chip" aria-hidden="true" data-astro-cid-jytfdbja></span> <span class="sw__name" data-astro-cid-jytfdbja>Solarized Light</span> </button> </div> </div> <p class="theme__foot" data-astro-cid-jytfdbja> <button type="button" class="theme__reset" data-theme-reset data-astro-cid-jytfdbja>Follow my system again</button> </p> </div> </div>  </div>   <script type="module">const o=document.querySelector("[data-theme-widget]");if(o){const a="cardo-theme",d=[...o.querySelectorAll("[data-theme-id]")],n=t=>{for(const e of d)e.setAttribute("aria-pressed",String(e.dataset.themeId===t))};n(document.documentElement.dataset.theme??null);for(const t of d)t.addEventListener("click",()=>{const e=t.dataset.themeId;if(e){document.documentElement.dataset.theme=e;try{localStorage.setItem(a,e)}catch{}n(e),window.dispatchEvent(new CustomEvent("cardo:themechange",{detail:{id:e}}))}});o.querySelector("[data-theme-reset]")?.addEventListener("click",()=>{delete document.documentElement.dataset.theme;try{localStorage.removeItem(a)}catch{}n(null),window.dispatchEvent(new CustomEvent("cardo:themechange",{detail:{id:null}}))})}</script> </div> </div> </div> </section>  <section class="section" id="download" data-astro-cid-j7pv25f6> <div data-astro-cid-j7pv25f6> <p class="eyebrow" data-astro-cid-j7pv25f6>Download</p> <h2 data-astro-cid-j7pv25f6>Free, no account, no strings attached.</h2> <p class="prose" data-astro-cid-j7pv25f6>
+Installers for all three platforms are published on
+<a href="https://github.com/hollatzleif/cardo-app/releases" rel="noopener" data-astro-cid-j7pv25f6>GitHub Releases</a>. The one-liner detects
+        your system and fetches the latest one.
+</p> </div> <div class="installs" data-astro-cid-j7pv25f6> <div class="install" data-astro-cid-j7pv25f6> <h3 data-astro-cid-j7pv25f6>macOS and Linux</h3> <div class="copy-block" data-astro-cid-chpwp47i> <span class="copy-block__label" data-astro-cid-chpwp47i>Terminal</span> <div class="copy-block__row" data-astro-cid-chpwp47i> <pre class="copy-block__pre" data-astro-cid-chpwp47i><code data-astro-cid-chpwp47i>curl -fsSL https://hollatzleif.github.io/cardo-app/install.sh | sh</code></pre> <button class="copy-block__btn" type="button" data-copy="curl -fsSL https://hollatzleif.github.io/cardo-app/install.sh | sh" aria-label="Copy command to clipboard" data-astro-cid-chpwp47i>Copy</button> </div> </div> <script type="module">for(const t of document.querySelectorAll(".copy-block__btn"))t.addEventListener("click",async()=>{try{await navigator.clipboard.writeText(t.dataset.copy??""),t.textContent="Copied!",setTimeout(()=>{t.textContent="Copy"},2e3)}catch{}});</script>  </div> <div class="install" data-astro-cid-j7pv25f6> <h3 data-astro-cid-j7pv25f6>Windows</h3> <div class="copy-block" data-astro-cid-chpwp47i> <span class="copy-block__label" data-astro-cid-chpwp47i>PowerShell</span> <div class="copy-block__row" data-astro-cid-chpwp47i> <pre class="copy-block__pre" data-astro-cid-chpwp47i><code data-astro-cid-chpwp47i>irm https://hollatzleif.github.io/cardo-app/install.ps1 | iex</code></pre> <button class="copy-block__btn" type="button" data-copy="irm https://hollatzleif.github.io/cardo-app/install.ps1 | iex" aria-label="Copy command to clipboard" data-astro-cid-chpwp47i>Copy</button> </div> </div>   </div> </div> <details class="disc" data-astro-cid-j7pv25f6> <summary data-astro-cid-j7pv25f6>macOS says the app is damaged or from an unidentified developer</summary> <div class="disc__body" data-astro-cid-j7pv25f6> <p data-astro-cid-j7pv25f6>The builds are not notarised yet. Right-click the app in Finder and choose
+<strong data-astro-cid-j7pv25f6>Open</strong>, then confirm once — after that it starts normally. Or run
+<code data-astro-cid-j7pv25f6>xattr -dr com.apple.quarantine /Applications/Cardo.app</code>.</p> </div> </details> <details class="disc" data-astro-cid-j7pv25f6> <summary data-astro-cid-j7pv25f6>Windows SmartScreen warns about an unknown publisher</summary> <div class="disc__body" data-astro-cid-j7pv25f6> <p data-astro-cid-j7pv25f6>Same reason: no paid code-signing certificate. Click <strong data-astro-cid-j7pv25f6>More info</strong>
+and then <strong data-astro-cid-j7pv25f6>Run anyway</strong>. The installer is the file published on
+          GitHub Releases and nothing else.</p> </div> </details> </section>  <section class="section" id="docs" data-astro-cid-j7pv25f6> <div data-astro-cid-j7pv25f6> <p class="eyebrow" data-astro-cid-j7pv25f6>Getting started</p> <h2 data-astro-cid-j7pv25f6>From installed to “this is my place now”.</h2> </div> <ol class="steps" data-astro-cid-j7pv25f6> <li data-astro-cid-j7pv25f6><strong data-astro-cid-j7pv25f6>Say hi.</strong> The first start drops you on an empty board. Nothing to
+        configure, no account, no wizard.</li> <li data-astro-cid-j7pv25f6><strong data-astro-cid-j7pv25f6>Press <kbd data-astro-cid-j7pv25f6>⌘E</kbd></strong> (or <kbd data-astro-cid-j7pv25f6>Ctrl E</kbd>) for edit mode. Now
+        widgets get a title bar with a drag grip and a resize corner.</li> <li data-astro-cid-j7pv25f6><strong data-astro-cid-j7pv25f6>Add widgets</strong> from the tool market, place them, resize them. Keep
+        separate pages for work, home and focus.</li> <li data-astro-cid-j7pv25f6><strong data-astro-cid-j7pv25f6>Press <kbd data-astro-cid-j7pv25f6>⌘K</kbd></strong> for the command palette — every command in
+        the app, one keystroke away.</li> <li data-astro-cid-j7pv25f6><strong data-astro-cid-j7pv25f6>Make it yours</strong> in the design panel: theme, card style, font,
+        density, per-widget accents.</li> <li data-astro-cid-j7pv25f6><strong data-astro-cid-j7pv25f6>Run the self-test</strong> in the settings whenever something feels off.</li> </ol> <details class="disc" data-astro-cid-j7pv25f6> <summary data-astro-cid-j7pv25f6>Where is my data?</summary> <div class="disc__body" data-astro-cid-j7pv25f6> <p data-astro-cid-j7pv25f6>In an SQLite database in your user folder, plus your notes as plain
+<code data-astro-cid-j7pv25f6>.md</code> files in a folder you picked yourself. Both readable with any
+          other tool. There is no server holding a copy.</p> </div> </details> <details class="disc" data-astro-cid-j7pv25f6> <summary data-astro-cid-j7pv25f6>Is it really free?</summary> <div class="disc__body" data-astro-cid-j7pv25f6> <p data-astro-cid-j7pv25f6>Yes. No paywall, no premium tier, no “pro” version, no trial. Donations are
+          voluntary and cover the running costs.</p> </div> </details> <details class="disc" data-astro-cid-j7pv25f6> <summary data-astro-cid-j7pv25f6>Questions, bugs, ideas</summary> <div class="disc__body" data-astro-cid-j7pv25f6> <p data-astro-cid-j7pv25f6>The <a href="https://github.com/hollatzleif/cardo-app/discussions" rel="noopener" data-astro-cid-j7pv25f6>forum</a> is GitHub Discussions — no
+          separate account needed if you already have one there.</p> </div> </details> </section>  <section class="section" id="donate" data-astro-cid-j7pv25f6> <div data-astro-cid-j7pv25f6> <p class="eyebrow" data-astro-cid-j7pv25f6>Support</p> <h2 data-astro-cid-j7pv25f6>Free to use. Donations keep it running.</h2> <p class="prose" data-astro-cid-j7pv25f6>
+Cardo is free and will stay free. A voluntary donation covers this year’s running
+        costs — domain, server, certificates. Shown as a percentage, never as amounts.
 </p> <div class="barometer" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Running costs covered: 0%" data-astro-cid-riha7gi2><div class="barometer__fill" style="width:0%" data-astro-cid-riha7gi2></div></div><p class="muted" data-astro-cid-riha7gi2>0 % of this year's running costs are covered.
-</p> <p data-astro-cid-j7pv25f6><a class="btn btn--ghost" href="/cardo-app/donate" data-astro-cid-j7pv25f6>Go to the donation page</a></p> </section>   </main> <footer class="site-footer"> <p>
+</p> <p class="prose small" data-astro-cid-j7pv25f6>
+Donation channels are not live yet. When they are, they will appear here.
+</p> </div> </section>  <script type="module">const n=document.querySelector("[data-clock]"),o=document.querySelector("[data-date]");if(n){const e=()=>{const t=new Date;n.textContent=`${String(t.getHours()).padStart(2,"0")}:${String(t.getMinutes()).padStart(2,"0")}`,o&&(o.textContent=t.toLocaleDateString(void 0,{weekday:"long",day:"numeric",month:"long"}))};e(),window.setInterval(e,2e4)}</script>  </main> <footer class="site-footer">  <nav class="site-footer__nav" aria-label="Sections"> <a href="/cardo-app/#assistant-detail"> Assistant </a><a href="/cardo-app/#tools"> Tools </a><a href="/cardo-app/#sync-detail"> Sync </a><a href="/cardo-app/#docs"> Docs </a><a href="https://github.com/hollatzleif/cardo-app/discussions" rel="noopener"> Forum ↗ </a><a href="/cardo-app/#download"> Download </a> </nav> <p>
 Cardo is local-first: your data stays on your device. No account, no tracking –
         this website sets no cookies either.
 </p> <p> <a href="https://github.com/hollatzleif/cardo-app" rel="noopener">GitHub</a> ·
 <a href="https://github.com/hollatzleif/cardo-app/discussions" rel="noopener">Forum</a> ·
-<a href="/cardo-app/privacy">Privacy</a> </p> </footer>  </body> </html>
+<a href="/cardo-app/privacy">Privacy</a> </p> </footer> <style is:global>
+      :root {
+        --base: #1e1e2e;
+        --surface-0: #313244;
+        --surface-1: #45475a;
+        --surface-2: #585b70;
+        --text: #cdd6f4;
+        --text-muted: #a6adc8;
+        --accent: #89b4fa;
+        --success: #a6e3a1;
+        --warning: #f9e2af;
+        --danger: #f38ba8;
+        --info: #89dceb;
+        --bg-canvas: #1e1e2e;
+        --bg-widget: #313244;
+        --bg-widget-hover: #45475a;
+        --bg-raised: #45475a;
+        --text-primary: #cdd6f4;
+        --border-subtle: #585b70;
+        --accent-text: #1e1e2e;
+        --accent-1: #89b4fa;
+        --accent-2: #cba6f7;
+        --accent-3: #94e2d5;
+        --accent-4: #fab387;
+        --accent-5: #f5c2e7;
+        --accent-6: #a6e3a1;
+        --accent-7: #f9e2af;
+        --accent-8: #b4befe;
+        --radius-sm: 6px;
+        --radius-md: 10px;
+        --radius-lg: 16px;
+        --shadow-widget: 0 2px 8px 0 color-mix(in srgb, var(--base) 60%, transparent);
+        --space-1: 4px;
+        --space-2: 8px;
+        --space-3: 12px;
+        --space-4: 16px;
+        --space-5: 24px;
+        --space-6: 32px;
+        --space-7: 48px;
+        --space-8: 64px;
+        --font-mono: ui-monospace, 'SF Mono', 'Cascadia Code', 'JetBrains Mono', Menlo, monospace;
+        --radius: 12px;
+      }
+      @media (prefers-color-scheme: light) {
+        :root {
+          --base: #eff1f5;
+        --surface-0: #e6e9ef;
+        --surface-1: #ccd0da;
+        --surface-2: #bcc0cc;
+        --text: #4c4f69;
+        --text-muted: #6c6f85;
+        --accent: #1e66f5;
+        --success: #40a02b;
+        --warning: #df8e1d;
+        --danger: #d20f39;
+        --info: #04a5e5;
+        --bg-canvas: #eff1f5;
+        --bg-widget: #e6e9ef;
+        --bg-widget-hover: #ccd0da;
+        --bg-raised: #ccd0da;
+        --text-primary: #4c4f69;
+        --border-subtle: #bcc0cc;
+        --accent-text: #eff1f5;
+        --accent-1: #1e66f5;
+        --accent-2: #8839ef;
+        --accent-3: #179299;
+        --accent-4: #fe640b;
+        --accent-5: #ea76cb;
+        --accent-6: #40a02b;
+        --accent-7: #df8e1d;
+        --accent-8: #7287fd;
+        }
+      }
+      [data-theme="ayu-mirage"] {
+        --base: #242936;
+        --surface-0: #1f2430;
+        --surface-1: #2a3141;
+        --surface-2: #343f4c;
+        --text: #cccac2;
+        --text-muted: #707a8c;
+        --accent: #ffcc66;
+        --success: #d5ff80;
+        --warning: #ffd173;
+        --danger: #f28779;
+        --info: #73d0ff;
+        --bg-canvas: #242936;
+        --bg-widget: #1f2430;
+        --bg-widget-hover: #2a3141;
+        --bg-raised: #2a3141;
+        --text-primary: #cccac2;
+        --border-subtle: #343f4c;
+        --accent-text: #242936;
+        --accent-1: #ffcc66;
+        --accent-2: #73d0ff;
+        --accent-3: #95e6cb;
+        --accent-4: #ffad66;
+        --accent-5: #dfbfff;
+        --accent-6: #ffd173;
+        --accent-7: #f28779;
+        --accent-8: #5ccfe6;
+      }
+      [data-theme="catppuccin-frappe"] {
+        --base: #303446;
+        --surface-0: #414559;
+        --surface-1: #51576d;
+        --surface-2: #626880;
+        --text: #c6d0f5;
+        --text-muted: #a5adce;
+        --accent: #ca9ee6;
+        --success: #a6d189;
+        --warning: #e5c890;
+        --danger: #e78284;
+        --info: #8caaee;
+        --bg-canvas: #303446;
+        --bg-widget: #414559;
+        --bg-widget-hover: #51576d;
+        --bg-raised: #51576d;
+        --text-primary: #c6d0f5;
+        --border-subtle: #626880;
+        --accent-text: #303446;
+        --accent-1: #ca9ee6;
+        --accent-2: #8caaee;
+        --accent-3: #81c8be;
+        --accent-4: #ef9f76;
+        --accent-5: #f4b8e4;
+        --accent-6: #e5c890;
+        --accent-7: #e78284;
+        --accent-8: #85c1dc;
+      }
+      [data-theme="catppuccin-mocha"] {
+        --base: #1e1e2e;
+        --surface-0: #313244;
+        --surface-1: #45475a;
+        --surface-2: #585b70;
+        --text: #cdd6f4;
+        --text-muted: #a6adc8;
+        --accent: #89b4fa;
+        --success: #a6e3a1;
+        --warning: #f9e2af;
+        --danger: #f38ba8;
+        --info: #89dceb;
+        --bg-canvas: #1e1e2e;
+        --bg-widget: #313244;
+        --bg-widget-hover: #45475a;
+        --bg-raised: #45475a;
+        --text-primary: #cdd6f4;
+        --border-subtle: #585b70;
+        --accent-text: #1e1e2e;
+        --accent-1: #89b4fa;
+        --accent-2: #cba6f7;
+        --accent-3: #94e2d5;
+        --accent-4: #fab387;
+        --accent-5: #f5c2e7;
+        --accent-6: #a6e3a1;
+        --accent-7: #f9e2af;
+        --accent-8: #b4befe;
+      }
+      [data-theme="dracula"] {
+        --base: #282a36;
+        --surface-0: #343746;
+        --surface-1: #44475a;
+        --surface-2: #6272a4;
+        --text: #f8f8f2;
+        --text-muted: #9ca3c0;
+        --accent: #bd93f9;
+        --success: #50fa7b;
+        --warning: #f1fa8c;
+        --danger: #ff5555;
+        --info: #8be9fd;
+        --bg-canvas: #282a36;
+        --bg-widget: #343746;
+        --bg-widget-hover: #44475a;
+        --bg-raised: #44475a;
+        --text-primary: #f8f8f2;
+        --border-subtle: #6272a4;
+        --accent-text: #282a36;
+        --accent-1: #bd93f9;
+        --accent-2: #ff79c6;
+        --accent-3: #8be9fd;
+        --accent-4: #ffb86c;
+        --accent-5: #ff5555;
+        --accent-6: #50fa7b;
+        --accent-7: #f1fa8c;
+        --accent-8: #6272a4;
+      }
+      [data-theme="everforest-dark"] {
+        --base: #2d353b;
+        --surface-0: #343f44;
+        --surface-1: #3d484d;
+        --surface-2: #475258;
+        --text: #d3c6aa;
+        --text-muted: #9da9a0;
+        --accent: #a7c080;
+        --success: #a7c080;
+        --warning: #dbbc7f;
+        --danger: #e67e80;
+        --info: #7fbbb3;
+        --bg-canvas: #2d353b;
+        --bg-widget: #343f44;
+        --bg-widget-hover: #3d484d;
+        --bg-raised: #3d484d;
+        --text-primary: #d3c6aa;
+        --border-subtle: #475258;
+        --accent-text: #2d353b;
+        --accent-1: #a7c080;
+        --accent-2: #7fbbb3;
+        --accent-3: #83c092;
+        --accent-4: #e69875;
+        --accent-5: #d699b6;
+        --accent-6: #dbbc7f;
+        --accent-7: #e67e80;
+        --accent-8: #7a8478;
+      }
+      [data-theme="gruvbox-dark"] {
+        --base: #282828;
+        --surface-0: #3c3836;
+        --surface-1: #504945;
+        --surface-2: #665c54;
+        --text: #ebdbb2;
+        --text-muted: #bdae93;
+        --accent: #83a598;
+        --success: #b8bb26;
+        --warning: #fabd2f;
+        --danger: #fb4934;
+        --info: #83a598;
+        --bg-canvas: #282828;
+        --bg-widget: #3c3836;
+        --bg-widget-hover: #504945;
+        --bg-raised: #504945;
+        --text-primary: #ebdbb2;
+        --border-subtle: #665c54;
+        --accent-text: #282828;
+        --accent-1: #83a598;
+        --accent-2: #8ec07c;
+        --accent-3: #b8bb26;
+        --accent-4: #fabd2f;
+        --accent-5: #fe8019;
+        --accent-6: #fb4934;
+        --accent-7: #d3869b;
+        --accent-8: #458588;
+      }
+      [data-theme="kanagawa-wave"] {
+        --base: #1f1f28;
+        --surface-0: #2a2a37;
+        --surface-1: #363646;
+        --surface-2: #54546d;
+        --text: #dcd7ba;
+        --text-muted: #a6a69c;
+        --accent: #7e9cd8;
+        --success: #98bb6c;
+        --warning: #e6c384;
+        --danger: #e82424;
+        --info: #7e9cd8;
+        --bg-canvas: #1f1f28;
+        --bg-widget: #2a2a37;
+        --bg-widget-hover: #363646;
+        --bg-raised: #363646;
+        --text-primary: #dcd7ba;
+        --border-subtle: #54546d;
+        --accent-text: #1f1f28;
+        --accent-1: #7e9cd8;
+        --accent-2: #957fb8;
+        --accent-3: #7aa89f;
+        --accent-4: #ffa066;
+        --accent-5: #d27e99;
+        --accent-6: #e6c384;
+        --accent-7: #e82424;
+        --accent-8: #6a9589;
+      }
+      [data-theme="night-owl"] {
+        --base: #011627;
+        --surface-0: #0b2942;
+        --surface-1: #12395b;
+        --surface-2: #1d3b53;
+        --text: #d6deeb;
+        --text-muted: #8badc1;
+        --accent: #82aaff;
+        --success: #addb67;
+        --warning: #ecc48d;
+        --danger: #ef5350;
+        --info: #82aaff;
+        --bg-canvas: #011627;
+        --bg-widget: #0b2942;
+        --bg-widget-hover: #12395b;
+        --bg-raised: #12395b;
+        --text-primary: #d6deeb;
+        --border-subtle: #1d3b53;
+        --accent-text: #011627;
+        --accent-1: #82aaff;
+        --accent-2: #c792ea;
+        --accent-3: #7fdbca;
+        --accent-4: #f78c6c;
+        --accent-5: #ff5874;
+        --accent-6: #ecc48d;
+        --accent-7: #addb67;
+        --accent-8: #5f7e97;
+      }
+      [data-theme="nord"] {
+        --base: #2e3440;
+        --surface-0: #3b4252;
+        --surface-1: #434c5e;
+        --surface-2: #4c566a;
+        --text: #eceff4;
+        --text-muted: #d8dee9;
+        --accent: #88c0d0;
+        --success: #a3be8c;
+        --warning: #ebcb8b;
+        --danger: #bf616a;
+        --info: #88c0d0;
+        --bg-canvas: #2e3440;
+        --bg-widget: #3b4252;
+        --bg-widget-hover: #434c5e;
+        --bg-raised: #434c5e;
+        --text-primary: #eceff4;
+        --border-subtle: #4c566a;
+        --accent-text: #2e3440;
+        --accent-1: #88c0d0;
+        --accent-2: #81a1c1;
+        --accent-3: #8fbcbb;
+        --accent-4: #d08770;
+        --accent-5: #b48ead;
+        --accent-6: #a3be8c;
+        --accent-7: #ebcb8b;
+        --accent-8: #5e81ac;
+      }
+      [data-theme="one-dark"] {
+        --base: #282c34;
+        --surface-0: #2f333d;
+        --surface-1: #383e4a;
+        --surface-2: #3f4451;
+        --text: #abb2bf;
+        --text-muted: #7f848e;
+        --accent: #61afef;
+        --success: #98c379;
+        --warning: #e5c07b;
+        --danger: #e06c75;
+        --info: #61afef;
+        --bg-canvas: #282c34;
+        --bg-widget: #2f333d;
+        --bg-widget-hover: #383e4a;
+        --bg-raised: #383e4a;
+        --text-primary: #abb2bf;
+        --border-subtle: #3f4451;
+        --accent-text: #282c34;
+        --accent-1: #61afef;
+        --accent-2: #c678dd;
+        --accent-3: #56b6c2;
+        --accent-4: #d19a66;
+        --accent-5: #e06c75;
+        --accent-6: #e5c07b;
+        --accent-7: #98c379;
+        --accent-8: #528bff;
+      }
+      [data-theme="rose-pine"] {
+        --base: #191724;
+        --surface-0: #1f1d2e;
+        --surface-1: #26233a;
+        --surface-2: #403d52;
+        --text: #e0def4;
+        --text-muted: #908caa;
+        --accent: #c4a7e7;
+        --success: #9ccfd8;
+        --warning: #f6c177;
+        --danger: #eb6f92;
+        --info: #c4a7e7;
+        --bg-canvas: #191724;
+        --bg-widget: #1f1d2e;
+        --bg-widget-hover: #26233a;
+        --bg-raised: #26233a;
+        --text-primary: #e0def4;
+        --border-subtle: #403d52;
+        --accent-text: #191724;
+        --accent-1: #c4a7e7;
+        --accent-2: #9ccfd8;
+        --accent-3: #ebbcba;
+        --accent-4: #f6c177;
+        --accent-5: #eb6f92;
+        --accent-6: #31748f;
+        --accent-7: #907aa9;
+        --accent-8: #56949f;
+      }
+      [data-theme="solarized-dark"] {
+        --base: #002b36;
+        --surface-0: #073642;
+        --surface-1: #0d4552;
+        --surface-2: #155563;
+        --text: #93a1a1;
+        --text-muted: #657b83;
+        --accent: #268bd2;
+        --success: #859900;
+        --warning: #b58900;
+        --danger: #dc322f;
+        --info: #268bd2;
+        --bg-canvas: #002b36;
+        --bg-widget: #073642;
+        --bg-widget-hover: #0d4552;
+        --bg-raised: #0d4552;
+        --text-primary: #93a1a1;
+        --border-subtle: #155563;
+        --accent-text: #002b36;
+        --accent-1: #268bd2;
+        --accent-2: #6c71c4;
+        --accent-3: #2aa198;
+        --accent-4: #cb4b16;
+        --accent-5: #d33682;
+        --accent-6: #b58900;
+        --accent-7: #dc322f;
+        --accent-8: #859900;
+      }
+      [data-theme="tokyo-night"] {
+        --base: #1a1b26;
+        --surface-0: #1f2335;
+        --surface-1: #24283b;
+        --surface-2: #292e42;
+        --text: #c0caf5;
+        --text-muted: #a9b1d6;
+        --accent: #7aa2f7;
+        --success: #9ece6a;
+        --warning: #e0af68;
+        --danger: #f7768e;
+        --info: #7dcfff;
+        --bg-canvas: #1a1b26;
+        --bg-widget: #1f2335;
+        --bg-widget-hover: #24283b;
+        --bg-raised: #24283b;
+        --text-primary: #c0caf5;
+        --border-subtle: #292e42;
+        --accent-text: #1a1b26;
+        --accent-1: #7aa2f7;
+        --accent-2: #bb9af7;
+        --accent-3: #7dcfff;
+        --accent-4: #ff9e64;
+        --accent-5: #f7768e;
+        --accent-6: #9ece6a;
+        --accent-7: #e0af68;
+        --accent-8: #2ac3de;
+      }
+      [data-theme="ayu-light"] {
+        --base: #fcfcfc;
+        --surface-0: #f3f4f5;
+        --surface-1: #e7e8e9;
+        --surface-2: #dcdddf;
+        --text: #5c6166;
+        --text-muted: #8a9199;
+        --accent: #ffaa33;
+        --success: #6cbf43;
+        --warning: #f2ae49;
+        --danger: #f07171;
+        --info: #399ee6;
+        --bg-canvas: #fcfcfc;
+        --bg-widget: #f3f4f5;
+        --bg-widget-hover: #e7e8e9;
+        --bg-raised: #e7e8e9;
+        --text-primary: #5c6166;
+        --border-subtle: #dcdddf;
+        --accent-text: #fcfcfc;
+        --accent-1: #ffaa33;
+        --accent-2: #399ee6;
+        --accent-3: #4cbf99;
+        --accent-4: #f2ae49;
+        --accent-5: #a37acc;
+        --accent-6: #e6ba7e;
+        --accent-7: #f07171;
+        --accent-8: #55b4d4;
+      }
+      [data-theme="catppuccin-latte"] {
+        --base: #eff1f5;
+        --surface-0: #e6e9ef;
+        --surface-1: #ccd0da;
+        --surface-2: #bcc0cc;
+        --text: #4c4f69;
+        --text-muted: #6c6f85;
+        --accent: #1e66f5;
+        --success: #40a02b;
+        --warning: #df8e1d;
+        --danger: #d20f39;
+        --info: #04a5e5;
+        --bg-canvas: #eff1f5;
+        --bg-widget: #e6e9ef;
+        --bg-widget-hover: #ccd0da;
+        --bg-raised: #ccd0da;
+        --text-primary: #4c4f69;
+        --border-subtle: #bcc0cc;
+        --accent-text: #eff1f5;
+        --accent-1: #1e66f5;
+        --accent-2: #8839ef;
+        --accent-3: #179299;
+        --accent-4: #fe640b;
+        --accent-5: #ea76cb;
+        --accent-6: #40a02b;
+        --accent-7: #df8e1d;
+        --accent-8: #7287fd;
+      }
+      [data-theme="flexoki-light"] {
+        --base: #fffcf0;
+        --surface-0: #f2f0e5;
+        --surface-1: #e6e4d9;
+        --surface-2: #dad8ce;
+        --text: #100f0f;
+        --text-muted: #6f6e69;
+        --accent: #205ea6;
+        --success: #66800b;
+        --warning: #ad8301;
+        --danger: #af3029;
+        --info: #205ea6;
+        --bg-canvas: #fffcf0;
+        --bg-widget: #f2f0e5;
+        --bg-widget-hover: #e6e4d9;
+        --bg-raised: #e6e4d9;
+        --text-primary: #100f0f;
+        --border-subtle: #dad8ce;
+        --accent-text: #fffcf0;
+        --accent-1: #205ea6;
+        --accent-2: #5e409d;
+        --accent-3: #24837b;
+        --accent-4: #bc5215;
+        --accent-5: #a02f6f;
+        --accent-6: #ad8301;
+        --accent-7: #af3029;
+        --accent-8: #66800b;
+      }
+      [data-theme="github-light"] {
+        --base: #ffffff;
+        --surface-0: #f6f8fa;
+        --surface-1: #eaeef2;
+        --surface-2: #d0d7de;
+        --text: #1f2328;
+        --text-muted: #656d76;
+        --accent: #0969da;
+        --success: #1a7f37;
+        --warning: #9a6700;
+        --danger: #cf222e;
+        --info: #0969da;
+        --bg-canvas: #ffffff;
+        --bg-widget: #f6f8fa;
+        --bg-widget-hover: #eaeef2;
+        --bg-raised: #eaeef2;
+        --text-primary: #1f2328;
+        --border-subtle: #d0d7de;
+        --accent-text: #ffffff;
+        --accent-1: #0969da;
+        --accent-2: #8250df;
+        --accent-3: #1b7c83;
+        --accent-4: #bc4c00;
+        --accent-5: #bf3989;
+        --accent-6: #1a7f37;
+        --accent-7: #9a6700;
+        --accent-8: #0550ae;
+      }
+      [data-theme="gruvbox-light"] {
+        --base: #fbf1c7;
+        --surface-0: #ebdbb2;
+        --surface-1: #d5c4a1;
+        --surface-2: #bdae93;
+        --text: #3c3836;
+        --text-muted: #665c54;
+        --accent: #076678;
+        --success: #79740e;
+        --warning: #b57614;
+        --danger: #9d0006;
+        --info: #076678;
+        --bg-canvas: #fbf1c7;
+        --bg-widget: #ebdbb2;
+        --bg-widget-hover: #d5c4a1;
+        --bg-raised: #d5c4a1;
+        --text-primary: #3c3836;
+        --border-subtle: #bdae93;
+        --accent-text: #fbf1c7;
+        --accent-1: #076678;
+        --accent-2: #427b58;
+        --accent-3: #79740e;
+        --accent-4: #b57614;
+        --accent-5: #af3a03;
+        --accent-6: #9d0006;
+        --accent-7: #8f3f71;
+        --accent-8: #458588;
+      }
+      [data-theme="rose-pine-dawn"] {
+        --base: #faf4ed;
+        --surface-0: #fffaf3;
+        --surface-1: #f2e9e1;
+        --surface-2: #e4dfde;
+        --text: #575279;
+        --text-muted: #797593;
+        --accent: #907aa9;
+        --success: #56949f;
+        --warning: #ea9d34;
+        --danger: #b4637a;
+        --info: #286983;
+        --bg-canvas: #faf4ed;
+        --bg-widget: #fffaf3;
+        --bg-widget-hover: #f2e9e1;
+        --bg-raised: #f2e9e1;
+        --text-primary: #575279;
+        --border-subtle: #e4dfde;
+        --accent-text: #faf4ed;
+        --accent-1: #907aa9;
+        --accent-2: #286983;
+        --accent-3: #56949f;
+        --accent-4: #ea9d34;
+        --accent-5: #b4637a;
+        --accent-6: #d7827e;
+        --accent-7: #eb6f92;
+        --accent-8: #9893a5;
+      }
+      [data-theme="solarized-light"] {
+        --base: #fdf6e3;
+        --surface-0: #eee8d5;
+        --surface-1: #ddd6c1;
+        --surface-2: #ccc4ae;
+        --text: #586e75;
+        --text-muted: #839496;
+        --accent: #268bd2;
+        --success: #859900;
+        --warning: #b58900;
+        --danger: #dc322f;
+        --info: #268bd2;
+        --bg-canvas: #fdf6e3;
+        --bg-widget: #eee8d5;
+        --bg-widget-hover: #ddd6c1;
+        --bg-raised: #ddd6c1;
+        --text-primary: #586e75;
+        --border-subtle: #ccc4ae;
+        --accent-text: #fdf6e3;
+        --accent-1: #268bd2;
+        --accent-2: #2aa198;
+        --accent-3: #859900;
+        --accent-4: #b58900;
+        --accent-5: #cb4b16;
+        --accent-6: #dc322f;
+        --accent-7: #d33682;
+        --accent-8: #6c71c4;
+      }
+    </style>  <script type="module" src="/cardo-app/_astro/Base.astro_astro_type_script_index_0_lang.Bj88juFx.js"></script> </body> </html>
